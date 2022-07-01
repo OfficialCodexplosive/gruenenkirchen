@@ -20,6 +20,12 @@ IE11
 
 ================================ */
 
+:root
+{
+  --landing-header-font-size: 2rem;
+  --landing-header-width: calc(var(--landing-header-font-size) * 11);
+}
+
 @media screen { 
 
   /**
@@ -73,7 +79,6 @@ IE11
 
   /* h1 bekommt font-size:2.5rem in basis.css */ 
   .site-logo {
-    font-family: Dosis, sans-serif;
     letter-spacing: 2px; 
 
     padding: 0; 
@@ -157,6 +162,28 @@ IE11
     height: calc(100vh - var(--nav-height));
     width: 100vw;
     background-color: aquamarine;
+    text-transform: uppercase;
+  }
+
+  .landing-intro h1, .landing-intro h2
+  {
+    font-family: 'Roboto', sans-serif;
+    font-size: var(--landing-header-font-size);
+    color: var(--accent2-color);
+    margin: 0;
+    padding: 0;
+    line-height: var(--landing-header-font-size);
+    width: var(--landing-header-width);
+  }
+
+  .landing-intro h1
+  {
+    font-weight: 300;
+  }
+
+  .landing-intro h2
+  {
+    font-weight: 600;
   }
 
   .news .site-content .wrapper,
