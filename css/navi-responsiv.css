@@ -1,0 +1,325 @@
+/* ================================
+
+navi-responsiv.css 
+
+Responsive Navigation basierend auf display:flex  
+
+IE11 
+- versteht verschachtelte @media nicht 
+  (siehe https://caniuse.com/#feat=css-mediaqueries)
+- Lösung: MQ ab 768px unter @media screen
+
+================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+:root
+{
+  --main-color: #46952b;
+  --accent1-color: #ffd44e;
+  --accent2-color: #333a3f;
+  --offwhite-color: #f1f1f1;
+  --offwhite-accent-color: #8a8e90;
+
+  --nav-height: 3.5rem;
+  --relative-logo-size: calc(var(--nav-height) * .62);
+}
+
+body
+{
+  font-family: 'Roboto', sans-serif;
+}
+
+a
+{
+  text-decoration: none;
+}
+
+@media screen {
+
+  /**
+    * Menübutton zum Ein- und Ausklappen gestalten  
+    */  
+  
+  .menubutton {
+    display: block; 
+    background: #666; 
+    color: white; 
+    
+    font-family: inherit; 
+    font-size: inherit; 
+    text-align: center; 
+    
+    padding: 0.5rem 1rem; 
+    border: 0; 
+    border-radius: 0.25rem; 
+    margin: 0 1rem 0.5rem 1rem;
+  }
+  
+    
+  /**
+    * Basisformatierung 
+    */
+  
+  .site-nav { 
+    position: -webkit-sticky; 
+    position: sticky; 
+    top: 0; 
+    
+    background: #fff; 
+    color: var(--offwhite-accent-color); 
+  }
+
+  .site-nav > .wrapper {
+    padding-left: 0; 
+    padding-right: 0; 
+    height: var(--nav-height);
+    line-height: var(--nav-height);
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  
+  /** 
+    * Liste gestalten 
+    */
+  #site-nav-logo
+  {
+    height: 100%;
+    width: var(--relative-logo-size);
+    display: inline-block;
+    background-size: var(--relative-logo-size);
+    background-repeat:no-repeat;
+    background-position: center center;
+    filter: brightness(0) saturate(100%) invert(89%) sepia(53%) saturate(3152%) hue-rotate(317deg) brightness(104%) contrast(105%);
+  }
+
+  .site-nav-separator
+  {
+    display: inline-block;
+    width: 10vw;
+    height: 100%;
+  }
+
+  .site-nav-col
+  {
+    font-size: 0.0001px;
+    text-align: center;
+    height: 100%;
+    display: inline-block;
+  }
+
+  /*
+  .site-nav-col:before
+  {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    line-height: 100%;
+  }*/
+
+  .site-nav-col > *
+  {
+    font-size: .8rem;
+  }
+
+  .site-nav-list 
+  {
+    /*
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: none;
+  }
+  
+  .site-nav-list li 
+  {
+
+    display: inline-block;
+    height: 100%;
+    /*display: inline-block;
+    list-style: none;
+    height: 100%;
+    line-height: 100%;
+    vertical-align: middle;*/
+  }
+
+  .site-nav-list a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 0 1vw;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: inherit;
+    /*text-decoration: none;
+   
+    background: none;
+
+    text-transform: capitalize;
+    color: inherit;*/
+  }
+
+  .menu-all-pages-container > ul > li.site-nav-participate
+  {
+    background-color: var(--main-color);
+    padding: 0 1.5vw;
+  }
+
+  li.site-nav-participate > a
+  {
+    color: #fff;
+  }
+
+  #site-nav-border-participate
+  {
+    border-bottom: 1px solid #fff;
+    padding-bottom: .125rem;
+  }
+
+  .menu-all-pages-container
+  {
+    display: inline-block;
+  }
+  
+  /*
+  .site-nav-list a.sie-sind-hier,
+  .site-nav-list .current-menu-item a{
+    background: none;
+  }  
+  
+  .site-nav-list a:hover, 
+  .site-nav-list a:focus {
+    background: none; 
+  }
+  
+  .site-nav-list a:active {
+    background: #0b74b8; 
+    color: white; 
+  }*/
+
+  /*
+  .site-nav-list 
+  {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    text-align: center;
+  }
+  
+  .site-nav-list li {
+    display: block;
+    list-style: none; 
+    height: 100%;
+    line-height: 100%;
+    text-align: center;
+  }
+  
+  
+  /**
+    * Links gestalten 
+    */  
+  /*
+  .site-nav-list a {
+    text-decoration: none;
+
+    height: 100%;
+    line-height: 100%;
+    
+    background: #333;
+    color: white;
+    
+  }
+  
+  .site-nav-list a.sie-sind-hier,
+  .site-nav-list .current-menu-item a{
+    background: #666; 
+    color: white; 
+  }  
+  
+  .site-nav-list a:hover, 
+  .site-nav-list a:focus {
+    background: #666; 
+    color: white; 
+  }
+  
+  .site-nav-list a:active {
+    background: #0b74b8; 
+    color: white; 
+  }  
+  
+  .site-nav-list {
+    max-height: 0; 
+    overflow: hidden; 
+  }
+  
+  .show-menu + .site-nav-list {
+    max-height: 100rem; 
+    
+    transition: max-height 400ms ease-in-out; 
+  }
+  */
+} /* Ende @media */   
+
+
+
+/** 
+  * Navigation ab 768px - Menübutton ausblenden und Liste horizontal anzeigen 
+  * 
+  */ 
+
+@media screen and (min-width: 768px) {
+
+  /* Menübutton verstecken */ 
+  .menubutton { display: none; } 
+
+  /* Liste einblenden und als Zeile darstellen */ 
+  /*.site-nav-list {
+    max-height: none; 
+    overflow: auto; 
+    transition: none; 
+
+    flex-flow: row wrap; 
+  }*/
+
+  .site-nav-list 
+  {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    text-align: center;
+  }
+
+  /* Fine-Tuning und Fallback für Flexbox */ 
+  /*.site-nav { padding: 0; }
+
+  .site-nav > .wrapper { padding: 0 1rem; }*/
+
+  /*.site-nav-list li { 
+    display: inline-block; 
+    height: 100%;
+    line-height: 100%;
+    vertical-align: middle;
+
+    flex: 1; 
+    text-align: center; 
+    border-right: 1px solid #eee; 
+
+    max-width: 170px; 
+
+  }*/
+
+
+} /* Ende der Media Query */
+
+
