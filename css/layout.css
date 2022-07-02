@@ -24,6 +24,9 @@ IE11
 {
   --landing-header-font-size: 2rem;
   --landing-header-width: calc(var(--landing-header-font-size) * 11);
+
+  --landing-intro-height-small: calc(50vh - var(--nav-height));
+  --landing-intro-height: calc(100vh - var(--nav-height));
 }
 
 @media screen { 
@@ -33,6 +36,46 @@ IE11
     * .wrapper für Layoutbereiche oder zusätzliche <div>-Elemente 
     *
     */ 
+
+  .landing-intro h1, .landing-intro h2
+  {
+    font-family: 'Roboto', sans-serif;
+    font-size: var(--landing-header-font-size);
+    color: var(--accent2-color);
+    margin: 0;
+    padding: 0;
+    line-height: var(--landing-header-font-size);
+    width: var(--landing-header-width);
+  }
+
+  .landing-intro h1
+  {
+    font-weight: 300;
+  }
+
+  .landing-intro h2
+  {
+    font-weight: 600;
+  }
+
+  .landing-intro
+  {
+    display: inline-block;
+    height: var(--landing-intro-height-small);
+    width: 100vw;
+    background-color: aquamarine;
+    text-transform: uppercase;
+  }
+
+  #landing-halflogo
+  {
+    height: var(--landing-intro-height-small);
+    width: var(--landing-intro-height-small);
+    background-size: 100% var(--landing-intro-height-small);
+    background-repeat:no-repeat;
+    background-position: center center;
+    filter: brightness(0) saturate(100%) invert(89%) sepia(53%) saturate(3152%) hue-rotate(317deg) brightness(104%) contrast(105%);
+  }
   
   body {
     background: white; 
@@ -159,31 +202,96 @@ IE11
   .landing-intro
   {
     display: inline-block;
-    height: calc(100vh - var(--nav-height));
+    height: var(--landing-intro-height);
     width: 100vw;
     background-color: aquamarine;
     text-transform: uppercase;
   }
 
-  .landing-intro h1, .landing-intro h2
+  .landing-intro #landing-stripe
   {
-    font-family: 'Roboto', sans-serif;
-    font-size: var(--landing-header-font-size);
-    color: var(--accent2-color);
-    margin: 0;
-    padding: 0;
-    line-height: var(--landing-header-font-size);
-    width: var(--landing-header-width);
+    position: absolute;
+    top: 44%;
+    left: 0;
+    transform: translate(0, -44%);    
+    z-index: 3;
+
+    height: 2px;
+    width: var(--landing-stripe-length);
+    background-color: var(--main-color);
   }
 
-  .landing-intro h1
+  .landing-intro #landing-text
   {
+    position: absolute;
+    top: 50%;
+    transform: translate(-20%, -50%);
+    left: 20%;
+    z-index: 3;
+  }
+
+  #landing-text-link-separator
+  {
+    background-color: none;
+    padding: 1.5vh;
+  }
+
+  .landing-intro #landing-text a
+  {
+    background-color: var(--main-color);
+    text-decoration: none;
+    color: #fff;
+    font-size: .7em;
     font-weight: 300;
+    padding: .7em 1.6em;
   }
 
-  .landing-intro h2
+  #landing-intro-half1
   {
-    font-weight: 600;
+    position: absolute;
+    height: var(--landing-intro-height);
+    width: 40vw;
+    background-color: white;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
+
+  #landing-intro-half2:before
+  {
+    content: "";
+    position: absolute;
+    left: 0; right: 0;
+    top: 0; bottom: 0;
+    background: rgba(255,255,255,.3);
+  }
+
+  #landing-intro-half2
+  {
+    position: absolute;
+    height: var(--landing-intro-height);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right -550px center;
+    z-index: 1;
+    right: 0;
+    left: 0;
+  }
+
+  .landing-halflogo
+  {
+    position: absolute;
+    left: 0;
+    right: 0;
+    /*margin-left: calc(auto - 1vw);*/
+    margin: 0 auto;
+    height: var(--landing-intro-height);
+    width: calc(var(--landing-intro-height) * 0.61);
+    background-size: calc(100% + 5vh) var(--landing-intro-height);
+    background-repeat:no-repeat;
+    background-position: center center;
+    z-index: 2;
+    /*filter: brightness(0) saturate(100%) invert(89%) sepia(53%) saturate(3152%) hue-rotate(317deg) brightness(104%) contrast(105%);*/
   }
 
   .news .site-content .wrapper,

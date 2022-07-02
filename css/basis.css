@@ -115,12 +115,22 @@ basis.css
     html {
       font-size: 1.125rem; 
     }
+
+    :root
+    {
+      --landing-stripe-length: 10%;
+    }
   }
 
   @media screen and (min-width: 1280px) {
     html {
       font-size: 1.25rem;
     } 
+
+    :root
+    {
+      --landing-stripe-length: 13%;
+    }
   } /* Ende @media */ 
   
   

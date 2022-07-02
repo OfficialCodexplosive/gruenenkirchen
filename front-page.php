@@ -4,21 +4,27 @@
     <main class="site-content">
 
       <section class="landing-intro">
-        <span>
-          <h1>GEILENKIRCHEN</h1>
-          <h2><?php bloginfo('description');?></h2>
-        </span>
+        <div id="landing-intro-half1"></div>
+        <div class="landing-halflogo" style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/gruene_halbblume_stencil.svg');"></div>
+        <div id="landing-intro-half2" style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/gruene_header.jpg')"></div>
+        <div id="landing-stripe"></div>
+        <div id="landing-text">
+            <h1>GEILENKIRCHEN</h1>
+            <h2><?php bloginfo('description');?></h2>
+            <div id="landing-text-link-separator"></div>
+            <a href="#">MEHR ERFAHREN</a>
+        </div>
       </section>
       
       <section class="content-intro">
         <div class="wrapper">
-      
-        <?php
-        the_post(); 
-        ?>
+        <?php if ( have_posts() ) : ?>
+          <?php while ( have_posts() ) : the_post(); ?>
           <h2><?php the_title(); ?></h2>
 
           <?php the_content(); ?>
+          <?php endwhile; ?>
+        <?php endif; ?>
         </div>
       </section>
       
