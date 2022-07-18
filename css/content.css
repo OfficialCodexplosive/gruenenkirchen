@@ -70,7 +70,117 @@ content.css
     margin: 1rem 0; 
   }
 
-  
+  .post-wrapper
+  {
+    position: relative;
+    height: 65vh;
+  }
+
+  .date-wrapper
+  {
+    position: relative;
+    height: 35vh;
+    width: 100vw;
+    background-color: var(--main-color);
+  }
+
+  .posts-section
+  {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 20vh;
+    grid-template-areas: 
+      "mc sc1"
+      "mc sc2";
+    grid-gap: 16px;
+    justify-items: center;
+  }
+
+  .posts-section > div
+  {
+    width: 30vw;
+    background-color: var(--main-color);
+    padding: 2rem;
+  }
+
+  .posts-section > div *
+  {
+    margin: 0;
+    padding: 0;
+  }
+
+  .posts-section > div > h2
+  {
+    margin-top: .25rem;
+    font-size: 12pt;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--offwhite-color);
+    overflow-wrap: break-word;
+    width: 100%;
+  }
+
+  .posts-section > div > h3
+  {
+    font-size: 9pt;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  .posts-section > div
+  {
+    position: relative;
+  }
+
+  .posts-section > div > a > span
+  {
+    position:absolute; 
+    width:100%;
+    height:100%;
+    top:0;
+    left: 0;
+
+    z-index: 1;
+  }
+
+  .site-content a[href^="http"]::after
+  {
+    content: none;
+  }
+
+  .posts-section .post-categories
+  {
+    list-style-type: none;
+    text-decoration: none;
+  }
+
+  .posts-section .post-categories a
+  {
+    color: var(--accent1-color);
+  }
+
+  .posts-section .post-categories a::after
+  {
+    content: none;
+  }
+
+  #post-1
+  {
+    grid-area: mc;
+  }
+
+  #post-2
+  {
+    grid-area: sc1;
+  }
+
+  #post-3
+  {
+    grid-area: sc2;
+  } 
   
   /** 
     * Seite "News" 

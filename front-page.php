@@ -17,23 +17,37 @@
       </section>
       
       <section class="content-intro">
-        <div class="wrapper">
-        <?php if ( have_posts() ) : ?>
-          <?php while ( have_posts() ) : the_post(); ?>
-          <h2><?php the_title(); ?></h2>
+        <div class="post-wrapper">
+          <div class="posts-section">
+          <?php 
+          if ( have_posts() ) : $count=0; 
+            while ( have_posts() && $count < 3 ) : the_post(); 
+              $count++;
+          ?>
+            <div id="post-<?php echo $count ?>">
+              <a href="<?php the_permalink(); ?>"><span></span></a>
+              <h3><?php the_category(); ?></h3>
+              <h2><?php the_title(); ?></h2>
+            </div>
+            <?php endwhile; ?>
+          <?php endif; ?>
+          </div>
+          <div class="termin-section">
+          </div>
+        </div>
 
-          <?php the_content(); ?>
-          <?php endwhile; ?>
-        <?php endif; ?>
+        <div class="date-wrapper">
+
         </div>
       </section>
       
+      <!--
       <section class="infoboxen">
         <div class="wrapper">
 
           <h2 class="visually-hidden">Die Bereiche der Website</h2>
 
-          <?php dynamic_sidebar( 'startblocks' ); ?>
+          < ?php dynamic_sidebar( 'startblocks' ); ?>
 
         </div>
       </section>
@@ -72,7 +86,7 @@
           </blockquote>  
       
         </div>
-      </section>
+      </section>-->
       
 
     </main>

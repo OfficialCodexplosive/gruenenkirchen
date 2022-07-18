@@ -29,6 +29,11 @@ IE11
   --landing-intro-height: calc(100vh - var(--nav-height));
 }
 
+body
+{
+  overflow-x: hidden;
+}
+
 @media screen { 
 
   /**
@@ -270,6 +275,7 @@ IE11
   {
     position: absolute;
     height: var(--landing-intro-height);
+    min-width: 50vw;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right -550px center;
