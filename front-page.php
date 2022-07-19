@@ -15,16 +15,17 @@
             <a href="#">MEHR ERFAHREN</a>
         </div>
       </section>
+
+      <section class="partnerships">
+        <ul>
+          <li><div style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/nabu.svg');"></div></li>
+          <li><div style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/volksinitiative_artenvielfalt.svg');"></div></li>
+          <li><div style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/ichkaufelokal.svg');"></div></li>
+          <li><div style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/bluetenparadies.svg');"></div></li>
+        </ul>
+      </section>
       
       <section class="content-intro">
-        <div class="partnership-wrapper">
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </div>
         <div class="post-wrapper">
           <div class="posts-section">
           <?php 

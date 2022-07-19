@@ -300,6 +300,61 @@ body
     /*filter: brightness(0) saturate(100%) invert(89%) sepia(53%) saturate(3152%) hue-rotate(317deg) brightness(104%) contrast(105%);*/
   }
 
+  /* Partnerschaften */
+  .partnerships
+  {
+    position: relative;
+    padding: 0;
+    height: 50vh;
+    width: 100%;
+    background-color: var(--offwhite-color);
+  }
+
+  .partnerships ul
+  {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: stretch; /* Default */
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 0 12vw;
+  }
+
+  .partnerships ul li
+  {
+    display: block;
+    flex: 0 1 auto; /* Default */
+    list-style-type: none;
+    width: 13vw;
+    height: 13vw;
+  }
+
+  .partnerships ul li div
+  {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: brightness(0) saturate(100%) invert(61%) sepia(5%) saturate(241%) hue-rotate(155deg) brightness(92%) contrast(86%);
+  }
+
+  .partnerships ul li div:hover
+  {
+    filter: brightness(0) saturate(100%) invert(17%) sepia(5%) saturate(1823%) hue-rotate(162deg) brightness(92%) contrast(81%);
+  }
+
+  /* Inhalt */
+
+  .content-intro
+  {
+    margin-top: -3.5vh;
+    padding: 0;
+  }
+
   .news .site-content .wrapper,
   .kontakt .site-content .wrapper {
     display: grid; 

@@ -70,6 +70,7 @@ content.css
     margin: 1rem 0; 
   }
 
+  /* Posts/ neue Artikel */
   .post-wrapper
   {
     position: relative;
@@ -231,7 +232,7 @@ content.css
 
   #post-2 .post-overlay, #post-3 .post-overlay
   {
-    background-image: linear-gradient(-70deg, var(--accent2-color) 0%, var(--accent2-color) 60%, transparent 60%);
+    background-image: linear-gradient(-70deg, var(--accent2-color) 0%, var(--accent2-color) 60%, transparent 60.2%);
   }
   
   /** 
