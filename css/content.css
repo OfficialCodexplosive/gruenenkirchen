@@ -104,6 +104,7 @@ content.css
     width: 30vw;
     background-color: var(--main-color);
     padding: 2rem;
+    z-index: 0;
   }
 
   .posts-section > div *
@@ -112,7 +113,27 @@ content.css
     padding: 0;
   }
 
-  .posts-section > div > h2
+  .post-info
+  {
+    position: absolute;
+    z-index: 2;
+  }
+
+  #post-1 .post-info
+  {
+    bottom: 1.5rem;
+    left: 1.5rem;
+  }
+
+  #post-2 .post-info, #post-3 .post-info
+  {
+    position:absolute; 
+    top: 50%;
+    left: 55%;
+    transform: translate(0, -50%);
+  }
+
+  .post-info > h2
   {
     margin-top: .25rem;
     font-size: 12pt;
@@ -120,10 +141,15 @@ content.css
     font-weight: 700;
     color: var(--offwhite-color);
     overflow-wrap: break-word;
-    width: 100%;
   }
 
-  .posts-section > div > h3
+  #post-2 .post-info h2, #post-3 .post-info h2
+  {
+    width: 90%;
+    overflow-wrap: break-word;
+  }
+
+  .post-info > h3
   {
     font-size: 9pt;
     text-transform: uppercase;
@@ -133,6 +159,10 @@ content.css
   .posts-section > div
   {
     position: relative;
+    background-color: var(--main-color);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   .posts-section > div > a > span
@@ -143,7 +173,7 @@ content.css
     top:0;
     left: 0;
 
-    z-index: 1;
+    z-index: 3;
   }
 
   .site-content a[href^="http"]::after
@@ -181,6 +211,28 @@ content.css
   {
     grid-area: sc2;
   } 
+
+  .post-overlay
+  {
+    position:absolute; 
+    width:100%;
+    height:100%;
+    top:0;
+    left: 0;
+
+    background-size:cover;
+    z-index: 1;
+  }
+
+  #post-1 .post-overlay
+  {
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  }
+
+  #post-2 .post-overlay, #post-3 .post-overlay
+  {
+    background-image: linear-gradient(-70deg, var(--accent2-color) 0%, var(--accent2-color) 60%, transparent 60%);
+  }
   
   /** 
     * Seite "News" 

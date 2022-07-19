@@ -17,6 +17,14 @@
       </section>
       
       <section class="content-intro">
+        <div class="partnership-wrapper">
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
         <div class="post-wrapper">
           <div class="posts-section">
           <?php 
@@ -24,11 +32,20 @@
             while ( have_posts() && $count < 3 ) : the_post(); 
               $count++;
           ?>
-            <div id="post-<?php echo $count ?>">
+            <?php if (has_post_thumbnail( $post->ID ) ): ?>
+              <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+            <?php else : ?>
+              <?php $image = array(''); ?>
+            <?php endif; ?>
+            <div id="post-<?php echo $count ?>" style="background-image: url('<?php echo $image[0]; ?>')">
+              <div class="post-overlay"></div>
               <a href="<?php the_permalink(); ?>"><span></span></a>
-              <h3><?php the_category(); ?></h3>
-              <h2><?php the_title(); ?></h2>
+              <div class="post-info">
+                <h3><?php the_category(); ?></h3>
+                <h2><?php the_title(); ?></h2>
+              </div>
             </div>
+
             <?php endwhile; ?>
           <?php endif; ?>
           </div>
