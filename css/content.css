@@ -11,7 +11,7 @@ content.css
 
   /** 
     * Hyperlinks im Inhaltsbereich  
-    */
+    
   .site-content a:link {
     color: #0B74B8; 
   }
@@ -26,6 +26,7 @@ content.css
   .site-content a:active {
     color: #d90000; 
   }
+  */
 
   /* Externe Hyperlinks mit einem Symbol kennzeichnen */ 
   .site-content a[href^="http"]::after {
@@ -106,6 +107,14 @@ content.css
     background-color: var(--main-color);
     padding: 2rem;
     z-index: 0;
+    transition: box-shadow .2s ease-out, transform .2s ease-out;
+    overflow: hidden;
+  }
+
+  .posts-section > div:hover
+  {
+    transform: translateY(-10px);
+    box-shadow: rgba(0, 0, 0, 0.14) 0px 10px 20px, rgba(0, 0, 0, 0.18) 0px 6px 6px;
   }
 
   .posts-section > div *
@@ -234,7 +243,90 @@ content.css
   {
     background-image: linear-gradient(-70deg, var(--accent2-color) 0%, var(--accent2-color) 60%, transparent 60.2%);
   }
-  
+
+  /* Daten/ Events */
+  .events
+  {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    margin: 0;
+    padding: 0;
+  }
+
+  .event
+  {
+    display: inline-block;
+    width: 20vw;
+    height: 10vw;
+    background-color: #fff;
+    padding: 1.5vw;
+    overflow: hidden;
+    margin: 0 1vw;
+  }
+
+  .event-title, .event-button
+  {
+    font-size: .75rem;
+  }
+
+  .event-date
+  {
+    font-size: .6rem;
+    font-weight: 400;
+    color: var(--offwhite-accent-color);
+  }
+
+  .event-title
+  {
+    font-weight: 800;
+    color: var(--main-color);
+  }
+
+  .event-button
+  {
+    background-color: var(--accent1-color);
+    position: absolute;
+    font-weight: 400;
+    bottom: 1.5vw;
+    padding: .4rem;
+    transition: background-color .2s ease-out;
+  }
+
+  .event-button:hover
+  {
+    background-color: var(--accent1-dark-color);    
+  }
+
+  a.event-link
+  {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+  }
+
+  /* Instagram */
+  .instagram-wrapper
+  {
+    width: 100%;
+    padding: 5vh;
+  }
+
+  .feed
+  {
+    position: relative;
+    width: 60vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .sb_instagram_header a
+  {
+    color: var(--main-color);
+  }
+
+
   /** 
     * Seite "News" 
     * 

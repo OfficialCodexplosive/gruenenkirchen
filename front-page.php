@@ -55,7 +55,37 @@
         </div>
 
         <div class="date-wrapper">
+              <div class="events">
+                <?php 
+                  $events = tribe_get_events( array('ends_after' => 'now') );
 
+                  foreach( $events as $event )
+                  {
+                    setup_postdata( $event );
+                  
+                ?>
+                <div class="event">
+                  <h2 class="event-date">
+                    <?php echo tribe_get_start_date( $event ); ?>
+                  </h2>
+                  <h1 class="event-title">
+                    <?php echo $event->post_title; ?>
+                  </h1>
+                  <a class="event-link" href="<?php echo tribe_get_event_link( $event ); ?>">
+                    <div class="event-button">
+                      Details ansehen
+                    </div>
+                  </a>
+                </div>
+
+                <?php }?>
+              </div>
+        </div>
+
+        <div class="instagram-wrapper">
+          <div class="feed">
+            <?php echo do_shortcode('[instagram-feed feed=2]'); ?>
+          </div>
         </div>
       </section>
       

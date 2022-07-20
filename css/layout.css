@@ -340,6 +340,7 @@ body
     background-size: contain;
     background-repeat: no-repeat;
     filter: brightness(0) saturate(100%) invert(61%) sepia(5%) saturate(241%) hue-rotate(155deg) brightness(92%) contrast(86%);
+    transition: filter .2s ease-out;
   }
 
   .partnerships ul li div:hover

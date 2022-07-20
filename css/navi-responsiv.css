@@ -15,6 +15,7 @@ IE11
 {
   --main-color: #46952b;
   --accent1-color: #ffd44e;
+  --accent1-dark-color: #E6BE47;
   --accent2-color: #333a3f;
   --offwhite-color: #f1f1f1;
   --offwhite-accent-color: #8a8e90;
@@ -86,6 +87,7 @@ a
   #site-nav-logo
   {
     height: 100%;
+    margin-right: .5rem;
     width: var(--relative-logo-size);
     display: inline-block;
     background-size: var(--relative-logo-size);
@@ -160,6 +162,7 @@ a
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     color: inherit;
+    transition: background-color .2s ease-out;
     /*text-decoration: none;
    
     background: none;
@@ -168,15 +171,12 @@ a
     color: inherit;*/
   }
 
-  .menu-all-pages-container > ul > li.site-nav-participate
-  {
-    background-color: var(--main-color);
-  }
-
   li.site-nav-participate  a
   {
     color: #fff;
     padding: 0 1.5vw;
+    background-color: var(--main-color);
+    transition: background-color .2s ease-out;
   }
 
   #site-nav-border-participate
