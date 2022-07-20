@@ -20,11 +20,13 @@ style.css
 
 @import url(navi-responsiv.css); 
 
+@import url(navi-footer.css);
+
 @import url(content.css); 
 
 @import url(formulare.css); 
 
-@import url(navi-meta.css); 
+/*@import url(navi-meta.css); */
 
 @import url(drucken.css); 
 

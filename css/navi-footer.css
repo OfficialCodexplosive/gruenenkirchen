@@ -1,0 +1,109 @@
+@media screen 
+{
+    .site-footer .wrapper
+    {
+        text-align: center;
+        padding: 1em 0;
+    }
+
+    #footer-title
+    {
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 20pt;
+        color: var(--main-light-color);
+    }
+
+    .meta-nav
+    {
+        padding: 2em 0 0 0;
+    }
+
+    .menu-footer-container, .menu-unterfooter-container
+    {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #menu-footer, #menu-unterfooter
+    {
+        list-style-type: none; /*to remove bullets*/
+        text-align: center;
+        padding: 0px;
+        overflow: hidden;
+    }
+
+    #menu-footer > li
+    {
+        line-height: 1.5em;
+        width: 10em;
+    }
+
+    #menu-unterfooter > li
+    {
+        width: 150px;
+    }
+
+    #menu-footer > li, #menu-unterfooter > li
+    {
+        padding: 2px;
+        display:inline-block;
+        vertical-align: top;
+        text-align: left;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    #menu-footer .sub-menu
+    {
+        list-style-type: none;
+        text-align: left;
+        padding: 0;
+        margin: 0;
+        text-transform: capitalize;
+        font-weight: 300;
+    }
+
+    #menu-unterfooter > li
+    {
+        text-transform: capitalize;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    #menu-unterfooter > li > a
+    {
+        color: var(--footer-color);
+    }
+
+    #menu-unterfooter > li + li::before
+    {
+        content: "|";
+        color: var(--footer-color);
+        margin-right: 25%;
+    }
+} /* Ende @media */   
+  
+  
+  
+  /** 
+    * Navigation ab 768px - Menübutton ausblenden und Liste horizontal anzeigen 
+    * 
+    */ 
+  
+  @media screen and (min-width: 768px) {
+  
+    /* Menübutton verstecken */ 
+    .menubutton { display: none; } 
+    
+    .site-footer .site-nav-list 
+    {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      text-align: center;
+    }
+  
+  
+  } /* Ende der Media Query */

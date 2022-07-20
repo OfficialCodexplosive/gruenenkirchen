@@ -167,7 +167,7 @@ body
   /* Grundlegende Gestaltung der Fußzeile aus Teil 1 (inkl. font-size kleiner) */
   .site-footer {
     font-size: smaller;
-    background-color: #333; 
+    background-color: var(--footer-bg); 
     padding: 1rem 0; /* ohne horizontales Padding */  
     /* margin-top: 2rem; */
     
