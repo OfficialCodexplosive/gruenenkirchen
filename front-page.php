@@ -4,8 +4,10 @@
     <main class="site-content">
 
       <section class="landing-intro">
-        <div id="landing-intro-half1"></div>
-        <div class="landing-halflogo" style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/gruene_halbblume_stencil.svg');"></div>
+        <div id="landing-flower-overlay">
+          <div id="landing-intro-half1"></div>
+          <img class="landing-halflogo" src="<?php echo get_bloginfo('template_url') ?>/images/gruene_halbblume_stencil.svg"></div>
+        </div>
         <div id="landing-intro-half2" style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/gruene_header.jpg')"></div>
         <div id="landing-stripe"></div>
         <div id="landing-text">
@@ -18,10 +20,15 @@
 
       <section class="partnerships">
         <ul>
+          <!--
           <li><div style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/nabu.svg');"></div></li>
           <li><div style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/volksinitiative_artenvielfalt.svg');"></div></li>
           <li><div style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/ichkaufelokal.svg');"></div></li>
           <li><div style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/bluetenparadies.svg');"></div></li>
+          -->
+          <li><div><a href="#" class="call-to-action">Spenden</a></div></li>
+          <li><div><a href="#" class="call-to-action">Mitglied werden</a></div></li>
+          <li><div><a href="#" class="call-to-action">Aktiv werden</a></div></li>
         </ul>
       </section>
       

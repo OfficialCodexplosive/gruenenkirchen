@@ -2,6 +2,13 @@
 
 add_action( 'wp_enqueue_scripts', 'register_gk_styles' );
 
+function gk_register_widget()
+{
+  
+}
+
+add_action('widgets_init', 'gk_register_widget');
+
 function register_gk_styles() { 
     wp_enqueue_style( 'themestyle', get_stylesheet_uri() );
     
