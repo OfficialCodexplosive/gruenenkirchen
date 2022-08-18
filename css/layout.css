@@ -357,14 +357,22 @@ body
     align-items: center;
   }
 
-  .partnerships ul li .call-to-action
+  ul li .call-to-action
   {
+    display: block;
     flex: 0 0 auto;
     color: var(--offwhite-color);
     font-family: 'Roboto';
-    font-weight: 600;
+    font-weight: 300;
     padding: 2vw 5vw;
-    background-color: var(--accent3-color);
+    background-color: var(--main-color);
+    transition: all .2s ease;
+  }
+
+  ul li .call-to-action:hover
+  {
+    color: var(--offwhite-color);
+    background-color: var(--accent1-dark-color);
   }
 
   /*

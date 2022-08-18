@@ -61,6 +61,7 @@
           </div>
         </div>
 
+        <!--
         <div class="date-wrapper">
               <div class="events">
                 <?php 
@@ -87,6 +88,65 @@
 
                 <?php }?>
               </div>
+        </div>-->
+
+        <div class="positionen-wrapper">
+          <ul class="positionen-gallery">
+            <li>
+              <a href="#">
+                <img src="<?php echo get_bloginfo('template_url') ?>/images/positionen/stadtentwicklung.jpg"/>
+                <div class="overlay"><span>Stadtentwicklung & Wirtschaft</span></div>
+              </a>
+            </li>
+            <li>
+              <a href="#2">
+                <img src="<?php echo get_bloginfo('template_url') ?>/images/positionen/klimaschutz.jpg"/>
+                <div class="overlay"><span>Klimaschutz</span></div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="<?php echo get_bloginfo('template_url') ?>/images/positionen/gesundheit.jpg"/>
+                <div class="overlay"><span>Gesundheit</span></div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="<?php echo get_bloginfo('template_url') ?>/images/positionen/energie.jpg"/>
+                <div class="overlay"><span>Energie & Wärme</span></div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="<?php echo get_bloginfo('template_url') ?>/images/positionen/mobilität.jpg"/>
+                <div class="overlay"><span>Verkehr & Mobilität</span></div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="<?php echo get_bloginfo('template_url') ?>/images/positionen/naturschutz.jpg"/>
+                <div class="overlay"><span>Umwelt & Naturschutz</span></div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="<?php echo get_bloginfo('template_url') ?>/images/positionen/bildung.jpg"/>
+                <div class="overlay"><span>Bildung & Schule</span></div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="<?php echo get_bloginfo('template_url') ?>/images/positionen/diversity.jpg"/>
+                <div class="overlay"><span>Diversität/ LGBTQI</span></div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="<?php echo get_bloginfo('template_url') ?>/images/positionen/culture_germany.jpg"/>
+                <div class="overlay"><span>Kultur</span></div>
+              </a>
+            </li>
+          </ul>
         </div>
 
         <div class="instagram-wrapper">
