@@ -33,49 +33,25 @@ content.css
     content: " \29c9"; 
   }  
 
-  
-  /** 
-    * Infoboxen    
-    */
-  
-  .infoboxen {
-    background-color: #eee;
-    padding: 1rem 0;
-    margin-bottom: 1rem;
-  }
-  
-  .infobox {
-    /* Infobox als Flex-Container */ 
-    display: flex; 
-    flex-flow: column;
-    
-    text-align: center; 
-    background-color: white; 
-    padding: 1rem;
-    margin: 1rem 0; 
-  }
-  
-  /* Hyperlinks am unteren Rand der Infobox platzieren */ 
-  .infobox p:last-child {
-    margin-top: auto; 
+  .site-content .center-header > h3
+  {
+    text-align: center;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 900;
+    font-style:italic;
+    color: var(--footer-bg);
   }
 
-  /** 
-    * Kundenstimmen mit <blockquote> 
-    */
-  .kundenstimme {
-    background-color: #eee; 
-    text-align: center; 
-    padding: 1rem; 
-    border-left: 5px solid #0b74b8; 
-    margin: 1rem 0; 
+  .post-wrapper > h3
+  {
+    margin-top: 12.5vh;
   }
 
   /* Posts/ neue Artikel */
   .post-wrapper
   {
     position: relative;
-    height: 65vh;
+    height: 75vh;
   }
 
   .date-wrapper
@@ -88,11 +64,20 @@ content.css
 
   .positionen-wrapper
   {
+    background-color: var(--offwhite-color);
     position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 100vw;
+    height: 100vh;
+    padding-bottom: 100vh;
+  }
+
+  .positionen-wrapper > h3
+  {
+    margin-top: 12.5vh;
+    margin-bottom: 7.5vh;
   }
 
   .positionen-gallery
@@ -111,6 +96,7 @@ content.css
   {
     flex-basis: 350px;
     position: relative;
+    height: 20vh;
   }
 
   .positionen-gallery > li:hover span
@@ -380,7 +366,7 @@ content.css
   .instagram-wrapper
   {
     width: 100%;
-    padding: 5vh;
+    padding: 10vh 5vh;
   }
 
   .feed

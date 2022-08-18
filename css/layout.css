@@ -265,6 +265,13 @@ body
     font-size: .7em;
     font-weight: 300;
     padding: .7em 1.6em;
+    transition: all .2s ease;
+  }
+
+  .landing-intro #landing-text a:hover
+  {
+    color: #fff;
+    background-color: var(--accent1-dark-color);
   }
 
   #landing-intro-half1
@@ -318,7 +325,7 @@ body
   .partnerships
   {
     position: relative;
-    padding: 0;
+    padding: 12.5vh 0;
     margin-top: -1rem;
     height: 50vh;
     width: 100%;
@@ -334,8 +341,8 @@ body
     align-items: stretch; /* Default */
     justify-content: space-between;
     width: 100%;
-    margin: 0;
-    padding: 0 18vw;
+    margin: 7.5vh 0;
+    padding: 0 20vw;
   }
 
   .partnerships ul li
@@ -361,7 +368,7 @@ body
   {
     display: block;
     flex: 0 0 auto;
-    color: var(--offwhite-color);
+    color: #fff;
     font-family: 'Roboto';
     font-weight: 300;
     padding: 2vw 5vw;
@@ -371,7 +378,7 @@ body
 
   ul li .call-to-action:hover
   {
-    color: var(--offwhite-color);
+    color: #fff;
     background-color: var(--accent1-dark-color);
   }
 
@@ -396,7 +403,7 @@ body
 
   .content-intro
   {
-    margin-top: -3.5vh;
+    margin: 0;
     padding: 0;
   }
 
