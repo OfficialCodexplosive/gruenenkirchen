@@ -38,6 +38,9 @@
         <div class="post-wrapper center-header">
           <h3>Aktuelles</h3>
           <div class="posts-section">
+          <?php
+            query_posts($args=null)
+          ?>
           <?php 
           if ( have_posts() ) : $count=0; 
             while ( have_posts() && $count < 3 ) : the_post(); 
