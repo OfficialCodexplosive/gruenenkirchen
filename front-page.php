@@ -80,7 +80,7 @@
         <!--
         <div class="date-wrapper">
               <div class="events">
-                <?php 
+                < ?php 
                   $events = tribe_get_events( array('ends_after' => 'now') );
 
                   foreach( $events as $event )
@@ -88,22 +88,22 @@
                     setup_postdata( $event );
                   
                 ?>
-                <span><?php echo 'break 12'; ?></span>
+                <span>< ?php echo 'break 12'; ?></span>
                 <div class="event">
                   <h2 class="event-date">
-                    <?php echo tribe_get_start_date( $event ); ?>
+                    < ?php echo tribe_get_start_date( $event ); ?>
                   </h2>
                   <h1 class="event-title">
-                    <?php echo $event->post_title; ?>
+                    < ?php echo $event->post_title; ?>
                   </h1>
-                  <a class="event-link" href="<?php echo tribe_get_event_link( $event ); ?>">
+                  <a class="event-link" href="< ?php echo tribe_get_event_link( $event ); ?>">
                     <div class="event-button">
                       Details ansehen
                     </div>
                   </a>
                 </div>
 
-                <?php }?>
+                < ?php }?>
               </div>
         </div>-->
 
