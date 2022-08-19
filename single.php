@@ -7,17 +7,33 @@
 
           <?php the_post(); ?>   
 
-          <div id="post-header">
-            <h2><?php the_title(); ?></h2>
-            <h3><?php the_excerpt(); ?></h3>
+          <div id="post-header" >
+            <div class="column">
+              <div id="summary">
+                <h4>
+                    <?php $categories = get_the_category(); ?>
+                    <?php $not_first = false; ?>
+                    <?php foreach($categories as $category) { ?>
+                    <span>
+                      <?php if(($not_first)){?>
+                      <?php echo '&';?> 
+                      <?php }?>
+                      <?php $not_first = true;?>
+                      <a href="<?php echo get_category_link($category->term_id);?>"><?php echo $category->name;?></a>
+                    </span>
+                    <?php } ?>
+                </h4>
+                <h2><?php the_title(); ?></h2>
+                <h3><?php the_excerpt(); ?></h3>
+              </div>
+            </div>
+
+            <div class="column">
+              <div id="post-thumbnail" style="background-image: url('<?php the_post_thumbnail_url( 'full' ); ?>');"></div>
+            </div>            
           </div>
 
-          <h4>Aus den Kategorien
-          <?php $categories = get_the_category(); ?>
-          <?php foreach($categories as $category) { ?>
-          <span><a href="<?php echo get_category_link($category->term_id);?>"><?php echo $category->name;?></a></span>
-          <?php } ?>
-          </h4>
+          
 
           <!--
           <p class="beitragsinfo">
@@ -28,21 +44,53 @@
           </p>
           -->
 
-          <?php the_post_thumbnail( 'post-thumbnail', [ 'style' => 'float:left; ']); ?>
-          <?php the_content(); ?>
-
+          <div id="post-content" class="has-padding has-side-column">
+            <div class="flexcol side-column">
+              <a href="#" class="participate">Mitmachen</a>
+            </div>
+            <div class="flexcol separator"></div>
+            <div class="flexcol main-column">
+              <?php the_content(); ?>
+            </div>
+          </div>
         </section>       
        
-        <section class="">
-         <?php comment_form(); ?>
+        <section class="similar-content">
+          <?php $comma_separated_cat = ""; ?>
+          <?php foreach($categories as $category) { ?>
+            <?php $comma_separated_cat .= ",".$category->cat_ID; ?>
+          <?php }?>
+          <?php  $comma_separated_cat = substr($comma_separated_cat, 1)?>
+          <?php $matching_posts = get_posts( array( 'category' => $comma_separated_cat, 'posts_per_page' => 3 ) );?>
+          
+          
+          <div class="similiar-wrapper center-header">
+            <h3>Weiter lesen</h3>
+            <ul class="similar-gallery">
+              <?php foreach($matching_posts as $post) : setup_postdata( $post ); ?>
+              <li> 
+                <a href="<?php the_permalink(); ?>">
+                  <img src="<?php the_post_thumbnail_url( 'medium' );?>"/>
+                  <div class="banner"><span><?php the_title(); ?></span></div>
+                </a> 
+              </li>
+              <?php endforeach; wp_reset_postdata();?>
+            </ul>
+          </div>
+
+        </section>
+        <!--
+        <section class="has-padding">
+         < ?php comment_form(); ?>
         </section>
 
-        <section>
-          <?php comments_number( 'Kein Kommentar', 'Ein Kommentar', '% Kommentare' ); ?>
+        <section class="has-padding">
+          < ?php comments_number( 'Kein Kommentar', 'Ein Kommentar', '% Kommentare' ); ?>
           <ol class="commentlist">
-            <?php wp_list_comments('callback=mytheme_comment', get_comments() ); ?>
+            < ?php wp_list_comments('callback=mytheme_comment', get_comments() ); ?>
           </ol>
         </section>
+        -->
 
 
       </div>

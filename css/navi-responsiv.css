@@ -11,23 +11,6 @@ IE11
 
 ================================ */
 
-:root
-{
-  --main-color: #46952b;
-  --main-light-color: #91c97c;
-  --accent1-color: #ffd44e;
-  --accent1-dark-color: #E6BE47;
-  --accent3-color: #f6007b;
-  --accent2-color: #333a3f;
-  --offwhite-color: #f1f1f1;
-  --offwhite-accent-color: #8a8e90;
-  --footer-color: #657777;
-  --footer-bg: #353d41;
-
-  --nav-height: 3.5rem;
-  --relative-logo-size: calc(var(--nav-height) * .62);
-}
-
 body
 {
   font-family: 'Roboto', sans-serif;
