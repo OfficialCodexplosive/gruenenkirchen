@@ -67,11 +67,13 @@
               </div>
               <span><?php echo 'break 8'; ?></span>
             </div>
-
             <?php endwhile; ?>
+            <span><?php echo 'break 9'; ?></span>
           <?php endif; ?>
+          <span><?php echo 'break 10'; ?></span>
           </div>
           <div class="termin-section">
+            <span><?php echo 'break 11'; ?></span>
           </div>
         </div>
 
@@ -86,6 +88,7 @@
                     setup_postdata( $event );
                   
                 ?>
+                <span><?php echo 'break 12'; ?></span>
                 <div class="event">
                   <h2 class="event-date">
                     <?php echo tribe_get_start_date( $event ); ?>
