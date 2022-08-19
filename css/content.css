@@ -292,7 +292,7 @@ content.css
 
   #post-1 .post-overlay
   {
-    background:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    background:linear-gradient(0deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0));
   }
 
   #post-2 .post-overlay, #post-3 .post-overlay

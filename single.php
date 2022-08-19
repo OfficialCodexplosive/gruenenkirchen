@@ -11,9 +11,18 @@
             <div class="column">
               <div id="summary">
                 <h4>
+                    <!-- exclude all categories that are sub of 'position'; WIP-->
                     <?php $categories = get_the_category(); ?>
                     <?php $not_first = false; ?>
                     <?php foreach($categories as $category) { ?>
+                      <?php 
+                        $cat_parent_id = $category->category_parent;
+                        if ( $cat_parent_id != 0 )
+                        {
+                          $cat_parent = get_term( $cat_parent_id, 'category' );
+                          if( $cat_parent != "Position" )
+                          {
+                      ?>
                     <span>
                       <?php if(($not_first)){?>
                       <?php echo '&';?> 
@@ -21,7 +30,7 @@
                       <?php $not_first = true;?>
                       <a href="<?php echo get_category_link($category->term_id);?>"><?php echo $category->name;?></a>
                     </span>
-                    <?php } ?>
+                    <?php } } }?>
                 </h4>
                 <h2><?php the_title(); ?></h2>
                 <h3><?php the_excerpt(); ?></h3>

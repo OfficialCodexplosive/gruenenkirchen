@@ -55,6 +55,7 @@
               <div class="post-overlay"></div>
               <a href="<?php the_permalink(); ?>"><span></span></a>
               <div class="post-info">
+                <!-- exclude all categories that are sub of 'position'-->
                 <h3><?php the_category(); ?></h3>
                 <h2><?php the_title(); ?></h2>
               </div>
@@ -100,55 +101,55 @@
           <h3>Positionen</h3>
           <ul class="positionen-gallery">
             <li>
-              <a href="#">
+              <a href="./positionen/stadtentwicklung-wirtschaft">
                 <img src="<?php echo get_bloginfo('template_url') ?>/images/positionen/stadtentwicklung.jpg"/>
                 <div class="overlay"><span>Stadtentwicklung & Wirtschaft</span></div>
               </a>
             </li>
             <li>
-              <a href="#2">
+              <a href="./positionen/klimaschutz">
                 <img src="<?php echo get_bloginfo('template_url') ?>/images/positionen/klimaschutz.jpg"/>
                 <div class="overlay"><span>Klimaschutz</span></div>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="./positionen/gesundheit">
                 <img src="<?php echo get_bloginfo('template_url') ?>/images/positionen/gesundheit.jpg"/>
                 <div class="overlay"><span>Gesundheit</span></div>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="./positionen/energie-waerme">
                 <img src="<?php echo get_bloginfo('template_url') ?>/images/positionen/energie.jpg"/>
                 <div class="overlay"><span>Energie & Wärme</span></div>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="./positionen/verkehr-mobilitaet">
                 <img src="<?php echo get_bloginfo('template_url') ?>/images/positionen/mobilität.jpg"/>
                 <div class="overlay"><span>Verkehr & Mobilität</span></div>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="./positionen/umwelt-naturschutz">
                 <img src="<?php echo get_bloginfo('template_url') ?>/images/positionen/naturschutz.jpg"/>
                 <div class="overlay"><span>Umwelt & Naturschutz</span></div>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="./positionen/bildung-schule">
                 <img src="<?php echo get_bloginfo('template_url') ?>/images/positionen/bildung.jpg"/>
                 <div class="overlay"><span>Bildung & Schule</span></div>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="./positionen/diversitaet-lgbtqi">
                 <img src="<?php echo get_bloginfo('template_url') ?>/images/positionen/diversity.jpg"/>
                 <div class="overlay"><span>Diversität/ LGBTQI</span></div>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="./positionen/kultur">
                 <img src="<?php echo get_bloginfo('template_url') ?>/images/positionen/culture_germany.jpg"/>
                 <div class="overlay"><span>Kultur</span></div>
               </a>
@@ -159,7 +160,7 @@
         <div class="instagram-wrapper center-header">
           <h3>Instagram</h3>
           <div class="feed">
-            <?php echo do_shortcode('[instagram-feed feed=2]'); ?>
+            <?php echo do_shortcode('[instagram-feed feed=0]'); ?>
           </div>
         </div>
       </section>
