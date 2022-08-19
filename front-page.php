@@ -38,26 +38,34 @@
         <div class="post-wrapper center-header">
           <h3>Aktuelles</h3>
           <div class="posts-section">
+          <span><?php echo 'break 1'; ?></span>
           <?php
-            query_posts($args=null)
+            query_posts($args=null);
           ?>
+          <span><?php echo 'break 2'; ?></span>
           <?php 
           if ( have_posts() ) : $count=0; 
             while ( have_posts() && $count < 3 ) : the_post(); 
               $count++;
           ?>
+          <span><?php echo 'break 3'; ?></span>
             <?php if (has_post_thumbnail( $post->ID ) ): ?>
               <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
             <?php else : ?>
               <?php $image = array(''); ?>
             <?php endif; ?>
+            <span><?php echo 'break 4'; ?></span>
             <div id="post-<?php echo $count ?>" style="background-image: url('<?php echo $image[0]; ?>')">
+            <span><?php echo 'break 5'; ?></span>
               <div class="post-overlay"></div>
+              <span><?php echo 'break 6'; ?></span>
               <a href="<?php the_permalink(); ?>"><span></span></a>
+              <span><?php echo 'break 7'; ?></span>
               <div class="post-info">
                 <h3><?php the_category(); ?></h3>
                 <h2><?php the_title(); ?></h2>
               </div>
+              <span><?php echo 'break 8'; ?></span>
             </div>
 
             <?php endwhile; ?>
