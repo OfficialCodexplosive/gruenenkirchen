@@ -43,7 +43,6 @@ if($parent_slug === "positionen")
           <li class="antrag-collapsible">
             <details>
               <summary>
-                <div class="">
                 <div class="summary-col">
                   <?php echo get_the_title();?>
                 </div>
