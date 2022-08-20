@@ -57,7 +57,12 @@ ul
 
 .antrag-content
 {
-    padding-top: 4vh;
+    padding-top: 16vh;
+}
+
+.antrag-content ul
+{
+    margin-top: 8vh;
 }
 
 details

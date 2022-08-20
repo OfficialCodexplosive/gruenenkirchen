@@ -63,34 +63,33 @@
           </div>
         </section>       
        
-        <section class="similar-content">
-          <?php $comma_separated_cat = ""; ?>
+        <?php $comma_separated_cat = ""; ?>
           <?php foreach($categories as $category) { ?>
             <?php $comma_separated_cat .= ",".$category->cat_ID; ?>
           <?php }?>
           <?php  $comma_separated_cat = substr($comma_separated_cat, 1)?>
-          <?php $matching_posts = get_posts( array( 'category' => $comma_separated_cat, 'posts_per_page' => 3 ) );?>
-          
-          
-          <div class="similiar-wrapper center-header">
-            <h3>Weiterlesen</h3>
-            <ul class="similar-gallery">
-              <?php foreach($matching_posts as $post) : setup_postdata( $post ); ?>
-              <li> 
-                <a href="<?php the_permalink(); ?>">
-                  <?php if( has_post_thumbnail() ){ ?>
-                    <img src="<?php the_post_thumbnail_url( 'medium' );?>"/>
-                  <?php } else {?>
-                    <div class="img-replacement"></div>
-                  <?php }?>
-                  <div class="banner"><span><?php the_title(); ?></span></div>
-                </a> 
-              </li>
-              <?php endforeach; wp_reset_postdata();?>
-            </ul>
-          </div>
-
-        </section>
+          <?php $matching_posts = get_posts( array( 'category' => $comma_separated_cat, 'posts_per_page' => 3, 'exclude' => array( $post->ID ) ) );?>
+        <?php if(count($matching_posts) !== 0): ?>
+          <section class="similar-content">
+            <div class="similiar-wrapper center-header">
+              <h3>Weiterlesen</h3>
+              <ul class="similar-gallery">
+                <?php foreach($matching_posts as $post) : setup_postdata( $post ); ?>
+                <li> 
+                  <a href="<?php the_permalink(); ?>">
+                    <?php if( has_post_thumbnail() ){ ?>
+                      <img src="<?php the_post_thumbnail_url( 'medium' );?>"/>
+                    <?php } else {?>
+                      <div class="img-replacement"></div>
+                    <?php }?>
+                    <div class="banner"><span><?php the_title(); ?></span></div>
+                  </a> 
+                </li>
+                <?php endforeach; wp_reset_postdata();?>
+              </ul>
+            </div>
+          </section>
+        <?php endif; ?>
         <!--
         <section class="has-padding">
          < ?php comment_form(); ?>

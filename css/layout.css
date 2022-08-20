@@ -340,6 +340,7 @@ body
     display: flex;
     align-items: stretch; /* Default */
     justify-content: space-between;
+    gap: 15px;
     width: 100%;
     margin: 7.5vh 0;
     padding: 0 20vw;
