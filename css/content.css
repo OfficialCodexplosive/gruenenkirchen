@@ -33,12 +33,16 @@ content.css
     content: " \29c9"; 
   }  
 
-  .site-content .center-header > h3
+  .site-content .center-header > h3, .positionen-content .center-header > h3
   {
     text-align: center;
     font-family: 'Archivo', sans-serif;
     font-weight: 900;
     font-style:italic;
+  }
+
+  .site-content .center-header > h3
+  {
     color: var(--footer-bg);
   }
 

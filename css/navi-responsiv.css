@@ -46,7 +46,30 @@ a
   /**
     * Basisformatierung 
     */
-  
+  .site-nav.transparent-background
+  {
+    
+    background: var(--positionen-bg);
+    color: var(--positionen-text-color);
+  }
+
+  .site-nav.transparent-background #site-nav-logo, .site-nav.transparent-background .brand-icon
+  {
+    
+    filter: brightness(0) saturate(100%) invert(45%) sepia(31%) saturate(441%) hue-rotate(60deg) brightness(95%) contrast(82%);
+  }
+
+  .site-nav.transparent-background li.site-nav-participate a
+  {
+    background-color: transparent;
+    color: var(--positionen-text-color);
+  }
+
+  .site-nav.transparent-background li.site-nav-participate #site-nav-border-participate
+  {
+    border-color: var(--positionen-text-color);
+  }
+
   .site-nav { 
     position: -webkit-sticky; 
     position: sticky; 

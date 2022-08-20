@@ -31,10 +31,14 @@ style.css
 
 @import url(beitrag.css);
 
+@import url(positionen.css);
+
 :root
 {
   --main-color: #46952b;
+  --main-desaturated-color: #618057;
   --main-light-color: #91c97c;
+  --main-lighter-color: #edffe7;
   --accent1-color: #ffd44e;
   --accent1-dark-color: #E6BE47;
   --accent1-darker-color: #ac8617;
@@ -47,4 +51,7 @@ style.css
 
   --nav-height: 3.5rem;
   --relative-logo-size: calc(var(--nav-height) * .62);
+  
+  --positionen-text-color: var(--main-desaturated-color);
+  --positionen-bg: var(--main-lighter-color);
 }

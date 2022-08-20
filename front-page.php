@@ -56,7 +56,22 @@
               <a href="<?php the_permalink(); ?>"><span></span></a>
               <div class="post-info">
                 <!-- exclude all categories that are sub of 'position'-->
-                <h3><?php the_category(); ?></h3>
+                <?php $categories = get_the_category(); ?>
+                <h3>
+                  <ul class="post-categories">
+                    <?php foreach($categories as $category){ ?>
+                      <?php 
+                        $cat_parent_id = $category->category_parent;
+                        
+                        #$cat_parent = get_the_category_by_ID( $cat_parent_id );
+                        if( $cat_parent_id != 14 )
+                        {
+                      ?>
+                      <li><a href="<?php echo get_category_link($category->term_id);?>"><?php echo $category->name ?></a></li>
+                      <?php } ?>
+                    <?php }?>
+                  </ul>
+                </h3>
                 <h2><?php the_title(); ?></h2>
               </div>
             </div>

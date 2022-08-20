@@ -204,6 +204,16 @@ body
     transition: all .25s ease;
 }
 
+.similar-gallery li .img-replacement
+{
+    object-fit: cover;
+    width: 100%;
+    height: 20vh;
+    background-color: var(--main-color);
+    vertical-align: middle;
+    transition: all .25s ease;
+}
+
 .similar-gallery > li:hover .banner
 {
     background-color: rgba(145, 201, 124, .5);

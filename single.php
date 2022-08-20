@@ -17,11 +17,10 @@
                     <?php foreach($categories as $category) { ?>
                       <?php 
                         $cat_parent_id = $category->category_parent;
-                        if ( $cat_parent_id != 0 )
+                        
+                        #$cat_parent = get_the_category_by_ID( $cat_parent_id );
+                        if( $cat_parent_id != 14 )
                         {
-                          $cat_parent = get_term( $cat_parent_id, 'category' );
-                          if( $cat_parent != "Position" )
-                          {
                       ?>
                     <span>
                       <?php if(($not_first)){?>
@@ -30,7 +29,7 @@
                       <?php $not_first = true;?>
                       <a href="<?php echo get_category_link($category->term_id);?>"><?php echo $category->name;?></a>
                     </span>
-                    <?php } } }?>
+                    <?php } }?>
                 </h4>
                 <h2><?php the_title(); ?></h2>
                 <h3><?php the_excerpt(); ?></h3>
@@ -74,12 +73,16 @@
           
           
           <div class="similiar-wrapper center-header">
-            <h3>Weiter lesen</h3>
+            <h3>Weiterlesen</h3>
             <ul class="similar-gallery">
               <?php foreach($matching_posts as $post) : setup_postdata( $post ); ?>
               <li> 
                 <a href="<?php the_permalink(); ?>">
-                  <img src="<?php the_post_thumbnail_url( 'medium' );?>"/>
+                  <?php if( has_post_thumbnail() ){ ?>
+                    <img src="<?php the_post_thumbnail_url( 'medium' );?>"/>
+                  <?php } else {?>
+                    <div class="img-replacement"></div>
+                  <?php }?>
                   <div class="banner"><span><?php the_title(); ?></span></div>
                 </a> 
               </li>

@@ -1,0 +1,115 @@
+.positionen-content
+{
+    font-family: 'Roboto';
+    text-align: center;
+    background-color: var(--positionen-bg);
+    height: 100%;
+    width: 100%;
+    padding: 0 12vw;
+    color: var(--positionen-text-color);
+}
+
+.positionen-content #positionen-beschreibung a
+{
+    color: var(--positionen-text-color);
+    border-bottom: 1px solid var(--positionen-text-color);
+    font-weight: bold;
+}
+
+.nav-filler
+{
+    position: absolute;
+    width: 100%;
+    height: 7rem;
+    top: 0;
+    left: 0;
+    background-color: var(--positionen-bg);
+}
+
+.site-footer
+{
+    position: relative;
+}
+
+.positionen-content .wrapper
+{
+    padding-top: 1rem;
+}
+
+.positionen-intro > h1
+{
+    font-weight: 200;
+    font-size: 5rem;
+    text-transform: uppercase;
+    padding: 5vh 0;
+}
+
+ul
+{
+    padding: 0;
+    list-style-type: none;
+}
+
+.positionen-content #positionen-beschreibung
+{
+    font-size: 1rem;
+}
+
+.antrag-content
+{
+    padding-top: 4vh;
+}
+
+details
+{
+    width: 100%;
+    text-align: left;
+    border: 1px solid var(--positionen-text-color);
+
+}
+
+details summary
+{
+    cursor: pointer;
+    padding: 1em;
+    display: flex;
+}
+
+details summary::-webkit-details-marker
+{
+    display: inline-block;
+}
+
+details summary .summary-col
+{
+    flex: 50%;
+}
+
+details summary .summary-col:first-of-type
+{
+    text-align: left;
+}
+
+details summary .summary-col:last-of-type
+{
+    font-style: italic;
+    text-align: right;
+}
+
+details[open] summary
+{
+    background-color: var(--positionen-text-color);
+    color: var(--positionen-bg);
+    border-bottom: 1px solid var(--positionen-text-color);
+}
+
+details[open] .not-summary
+{
+    padding: 1em;
+    padding-bottom: 0;
+}
+
+details summary > *
+{
+    display: inline;
+}
