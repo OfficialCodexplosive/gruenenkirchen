@@ -19,7 +19,7 @@
                         $cat_parent_id = $category->category_parent;
                         
                         #$cat_parent = get_the_category_by_ID( $cat_parent_id );
-                        if( $cat_parent_id != 14 )
+                        if( $cat_parent_id != 11 )
                         {
                       ?>
                     <span>
