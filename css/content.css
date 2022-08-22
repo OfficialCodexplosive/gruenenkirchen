@@ -33,7 +33,7 @@ content.css
     content: " \29c9"; 
   }  
 
-  .site-content .center-header > h3, .positionen-content .center-header > h3
+  .center-header > h3, .site-content .center-header > * > h3, .positionen-content .center-header > * > h3
   {
     text-align: center;
     font-family: 'Archivo', sans-serif;
@@ -41,21 +41,30 @@ content.css
     font-style:italic;
   }
 
-  .site-content .center-header > h3
+  .site-content .center-header > * > h3, .center-header > h3
   {
     color: var(--footer-bg);
-  }
-
-  .post-wrapper > h3
-  {
-    margin-top: 12.5vh;
   }
 
   /* Posts/ neue Artikel */
   .post-wrapper
   {
     position: relative;
-    height: 75vh;
+    height: 100vh;
+    background-color: red;
+  }
+  
+  .center-section
+  {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    
+    padding: 20% 0;
+    text-align: center;
   }
 
   .date-wrapper
@@ -68,37 +77,39 @@ content.css
 
   .positionen-wrapper
   {
-    background-color: var(--offwhite-color);
+    background-color: orange;/*var(--offwhite-color);*/
     position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100vw;
     height: 100vh;
-    padding-bottom: 100vh;
   }
 
-  .positionen-wrapper > h3
+  .positionen-wrapper .center-section
   {
-    margin-top: 12.5vh;
-    margin-bottom: 7.5vh;
+    padding: 10% 0;
   }
+
+  .positionen-wrapper .section
+  {
+    padding: 0;
+  }
+
 
   .positionen-gallery
   {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    align-content: flex-start;
     list-style: none;
     font-weight: 300;
     font-size: .9em;
     text-transform: uppercase;
+    margin: 0; 
+    padding: 0;
   }
 
   .positionen-gallery > li
   {
-    flex-basis: 350px;
+    width: 33.333%;
     position: relative;
     height: 20vh;
   }
@@ -146,76 +157,70 @@ content.css
     transition: all .25s ease;
   }
 
-  .posts-section
+  /* Aktuelles-Abschnitt */
+
+  .section
   {
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%,-50%);
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 20vh;
-    grid-template-areas: 
-      "mc sc1"
-      "mc sc2";
-    grid-gap: 16px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-items: center;
+    padding: 2% 1%;
+    width: 100%;
+    height: 100%;
   }
 
-  .posts-section > div
+  .section > .post
   {
-    width: 30vw;
+    flex: 1;
+    margin: 0 1% 0 0;
     background-color: var(--main-color);
-    padding: 2rem;
     z-index: 0;
     transition: box-shadow .2s ease-out, transform .2s ease-out;
     overflow: hidden;
+    background-color: var(--main-color);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
-  .posts-section > div:hover
+  .img-wrapper
+  {
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding-top: 56.25%;
+    position: relative;
+  }
+
+  .img-wrapper > img
+  {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .section > .post:last-of-type
+  {
+    margin: 0;
+  }
+
+  .section > div:hover
   {
     transform: translateY(-10px);
     box-shadow: rgba(0, 0, 0, 0.14) 0px 10px 20px, rgba(0, 0, 0, 0.18) 0px 6px 6px;
   }
 
-  .posts-section > div *
-  {
-    margin: 0;
-    padding: 0;
-  }
-
-  .post-info
-  {
-    position: absolute;
-    z-index: 2;
-  }
-
-  #post-1 .post-info
-  {
-    bottom: 1.5rem;
-    left: 1.5rem;
-  }
-
-  #post-2 .post-info, #post-3 .post-info
-  {
-    position:absolute; 
-    top: 50%;
-    left: 55%;
-    transform: translate(0, -50%);
-  }
-
+  
   .post-info > h2
   {
     margin-top: .25rem;
     font-size: 12pt;
     text-transform: uppercase;
     font-weight: 700;
-    color: var(--offwhite-color);
-    overflow-wrap: break-word;
-  }
-
-  #post-2 .post-info h2, #post-3 .post-info h2
-  {
-    width: 90%;
+    color: #000;
     overflow-wrap: break-word;
   }
 
@@ -225,83 +230,30 @@ content.css
     text-transform: uppercase;
     font-weight: 300;
   }
-
-  .posts-section > div
-  {
-    position: relative;
-    background-color: var(--main-color);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  .posts-section > div > a > span
-  {
-    position:absolute; 
-    width:100%;
-    height:100%;
-    top:0;
-    left: 0;
-
-    z-index: 3;
-  }
-
+  
   .site-content a[href^="http"]::after
   {
     content: none;
   }
 
-  .posts-section .post-categories
+  .section .post-categories
   {
     list-style-type: none;
     text-decoration: none;
   }
 
-  .posts-section .post-categories a
+  .section .post-categories a
   {
     color: var(--accent1-color);
   }
-
-  .posts-section .post-categories a::after
-  {
-    content: none;
-  }
-
-  #post-1
-  {
-    grid-area: mc;
-  }
-
-  #post-2
-  {
-    grid-area: sc1;
-  }
-
-  #post-3
-  {
-    grid-area: sc2;
-  } 
-
+  
   .post-overlay
   {
-    position:absolute; 
-    width:100%;
-    height:100%;
-    top:0;
-    left: 0;
-
-    background-size:cover;
+    height: 100%;
+    overflow: hidden;
     z-index: 1;
-  }
-
-  #post-1 .post-overlay
-  {
-    background:linear-gradient(0deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0));
-  }
-
-  #post-2 .post-overlay, #post-3 .post-overlay
-  {
-    background-image: linear-gradient(-70deg, var(--accent2-color) 0%, var(--accent2-color) 60%, transparent 60.2%);
+    background-color: #fff;
+    color: #000;
   }
 
   /* Daten/ Events */

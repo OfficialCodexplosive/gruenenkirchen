@@ -19,66 +19,71 @@
       </section>
 
       <section class="partnerships center-header">
-        <h3>Mach mit!</h3>
-        <ul>
-          <!--
-          <li><div style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/nabu.svg');"></div></li>
-          <li><div style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/volksinitiative_artenvielfalt.svg');"></div></li>
-          <li><div style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/ichkaufelokal.svg');"></div></li>
-          <li><div style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/bluetenparadies.svg');"></div></li>
-          -->
-          <li><div><a href="#" class="call-to-action">Spenden</a></div></li>
-          <li><div><a href="#" class="call-to-action">Mitglied werden</a></div></li>
-          <li><div><a href="#" class="call-to-action">Aktiv werden</a></div></li>
-        </ul>
+          <h3>Mach mit!</h3>
+            <ul>
+              <!--
+              <li><div style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/nabu.svg');"></div></li>
+              <li><div style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/volksinitiative_artenvielfalt.svg');"></div></li>
+              <li><div style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/ichkaufelokal.svg');"></div></li>
+              <li><div style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/bluetenparadies.svg');"></div></li>
+              -->
+              <li><div><a href="#" class="call-to-action">Spenden</a></div></li>
+              <li><div><a href="#" class="call-to-action">Mitglied werden</a></div></li>
+              <li><div><a href="#" class="call-to-action">Aktiv werden</a></div></li>
+            </ul>
       </section>
       
       <section class="content-intro">
         
         <div class="post-wrapper center-header">
-          <h3>Aktuelles</h3>
-          <div class="posts-section">
-          <?php
-            query_posts($args=null);
-          ?>
-          <?php 
-          if ( have_posts() ) : $count=0; 
-            while ( have_posts() && $count < 3 ) : the_post(); 
-              $count++;
-          ?>
-            <?php if (has_post_thumbnail( $post->ID ) ): ?>
-              <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-            <?php else : ?>
-              <?php $image = array(''); ?>
-            <?php endif; ?>
-            <div id="post-<?php echo $count ?>" style="background-image: url('<?php echo $image[0]; ?>')">
-              <div class="post-overlay"></div>
-              <a href="<?php the_permalink(); ?>"><span></span></a>
-              <div class="post-info">
-                <!-- exclude all categories that are sub of 'position'-->
-                <?php $categories = get_the_category(); ?>
-                <h3>
-                  <ul class="post-categories">
-                    <?php foreach($categories as $category){ ?>
-                      <?php 
-                        $cat_parent_id = $category->category_parent;
-                        
-                        #$cat_parent = get_the_category_by_ID( $cat_parent_id );
-                        if( $cat_parent_id != 11 )
-                        {
-                      ?>
-                      <li><a href="<?php echo get_category_link($category->term_id);?>"><?php echo $category->name ?></a></li>
-                      <?php } ?>
-                    <?php }?>
-                  </ul>
-                </h3>
-                <h2><?php the_title(); ?></h2>
-              </div>
+          <div class="center-section">
+            <h3>Aktuelles</h3>
+            <div class="section">
+              <?php
+                $the_query = new WP_Query( array('posts_per_page' => 3,) );
+              ?>
+              <?php 
+              if ( $the_query->have_posts() ) : 
+                while ( $the_query->have_posts() ) : $the_query->the_post(); 
+                  $count++;
+              ?>
+                <?php if (has_post_thumbnail( get_the_ID() ) ): ?>
+                  <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'single-post-thumbnail' ); ?>
+                <?php else : ?>
+                  <?php $image = array(''); ?>
+                <?php endif; ?>
+                <div class="post">
+                  <div class="img-wrapper">
+                    <img src="<?php echo $image[0]; ?>"/>
+                  </div>
+                  <div class="post-overlay">
+                    <div class="post-info">
+                      <!-- exclude all categories that are sub of 'position'-->
+                      <?php $categories = get_the_category(); ?>
+                      <h3>
+                        <ul class="post-categories">
+                          <?php foreach($categories as $category){ ?>
+                            <?php 
+                              $cat_parent_id = $category->category_parent;
+                              
+                              #$cat_parent = get_the_category_by_ID( $cat_parent_id );
+                              if( $cat_parent_id != 14 )
+                              {
+                            ?>
+                            <li><a href="<?php echo get_category_link($category->term_id);?>"><?php echo $category->name ?></a></li>
+                            <?php } ?>
+                          <?php }?>
+                        </ul>
+                      </h3>
+                      <h2><?php the_title(); ?></h2>
+                    </div>
+                  </div>
+                  <a href="<?php the_permalink(); ?>"><span></span></a>
+                </div>
+                <?php endwhile; ?>
+              <?php endif; ?>
             </div>
-            <?php endwhile; ?>
-          <?php endif; ?>
-          </div>
-          <div class="termin-section">
+            <a href="#">Mehr</a>
           </div>
         </div>
 
@@ -113,70 +118,75 @@
         </div>-->
 
         <div class="positionen-wrapper center-header">
-          <h3>Positionen</h3>
-          <ul class="positionen-gallery">
-            <li>
-              <a href="./positionen/stadtentwicklung-wirtschaft">
-                <img src="<?php echo get_bloginfo('template_url') ?>/images/positionen/stadtentwicklung.jpg"/>
-                <div class="overlay"><span>Stadtentwicklung & Wirtschaft</span></div>
-              </a>
-            </li>
-            <li>
-              <a href="./positionen/klimaschutz">
-                <img src="<?php echo get_bloginfo('template_url') ?>/images/positionen/klimaschutz.jpg"/>
-                <div class="overlay"><span>Klimaschutz</span></div>
-              </a>
-            </li>
-            <li>
-              <a href="./positionen/gesundheit">
-                <img src="<?php echo get_bloginfo('template_url') ?>/images/positionen/gesundheit.jpg"/>
-                <div class="overlay"><span>Gesundheit</span></div>
-              </a>
-            </li>
-            <li>
-              <a href="./positionen/energie-waerme">
-                <img src="<?php echo get_bloginfo('template_url') ?>/images/positionen/energie.jpg"/>
-                <div class="overlay"><span>Energie & Wärme</span></div>
-              </a>
-            </li>
-            <li>
-              <a href="./positionen/verkehr-mobilitaet">
-                <img src="<?php echo get_bloginfo('template_url') ?>/images/positionen/mobilität.jpg"/>
-                <div class="overlay"><span>Verkehr & Mobilität</span></div>
-              </a>
-            </li>
-            <li>
-              <a href="./positionen/umwelt-naturschutz">
-                <img src="<?php echo get_bloginfo('template_url') ?>/images/positionen/naturschutz.jpg"/>
-                <div class="overlay"><span>Umwelt & Naturschutz</span></div>
-              </a>
-            </li>
-            <li>
-              <a href="./positionen/bildung-schule">
-                <img src="<?php echo get_bloginfo('template_url') ?>/images/positionen/bildung.jpg"/>
-                <div class="overlay"><span>Bildung & Schule</span></div>
-              </a>
-            </li>
-            <li>
-              <a href="./positionen/diversitaet-lgbtqi">
-                <img src="<?php echo get_bloginfo('template_url') ?>/images/positionen/diversity.jpg"/>
-                <div class="overlay"><span>Diversität/ LGBTQI</span></div>
-              </a>
-            </li>
-            <li>
-              <a href="./positionen/kultur">
-                <img src="<?php echo get_bloginfo('template_url') ?>/images/positionen/culture_germany.jpg"/>
-                <div class="overlay"><span>Kultur</span></div>
-              </a>
-            </li>
-          </ul>
-        </div>
+          <div class="center-section">
+            <h3>Positionen</h3>
+            <div class="section">
+              <ul class="positionen-gallery">
+                <li>
+                  <a href="./positionen/stadtentwicklung-wirtschaft">
+                    <img src="<?php echo get_bloginfo('template_url') ?>/images/positionen/stadtentwicklung.jpg"/>
+                    <div class="overlay"><span>Stadtentwicklung & Wirtschaft</span></div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./positionen/klimaschutz">
+                    <img src="<?php echo get_bloginfo('template_url') ?>/images/positionen/klimaschutz.jpg"/>
+                    <div class="overlay"><span>Klimaschutz</span></div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./positionen/gesundheit">
+                    <img src="<?php echo get_bloginfo('template_url') ?>/images/positionen/gesundheit.jpg"/>
+                    <div class="overlay"><span>Gesundheit</span></div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./positionen/energie-waerme">
+                    <img src="<?php echo get_bloginfo('template_url') ?>/images/positionen/energie.jpg"/>
+                    <div class="overlay"><span>Energie & Wärme</span></div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./positionen/verkehr-mobilitaet">
+                    <img src="<?php echo get_bloginfo('template_url') ?>/images/positionen/mobilität.jpg"/>
+                    <div class="overlay"><span>Verkehr & Mobilität</span></div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./positionen/umwelt-naturschutz">
+                    <img src="<?php echo get_bloginfo('template_url') ?>/images/positionen/naturschutz.jpg"/>
+                    <div class="overlay"><span>Umwelt & Naturschutz</span></div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./positionen/bildung-schule">
+                    <img src="<?php echo get_bloginfo('template_url') ?>/images/positionen/bildung.jpg"/>
+                    <div class="overlay"><span>Bildung & Schule</span></div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./positionen/diversitaet-lgbtqi">
+                    <img src="<?php echo get_bloginfo('template_url') ?>/images/positionen/diversity.jpg"/>
+                    <div class="overlay"><span>Diversität/ LGBTQI</span></div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./positionen/kultur">
+                    <img src="<?php echo get_bloginfo('template_url') ?>/images/positionen/culture_germany.jpg"/>
+                    <div class="overlay"><span>Kultur</span></div>
+                  </a>
+                </li>
+              </ul>
+              </div>
+              <a href="#">Alle Positionen</a>
+            </div>
+          </div>
 
         <div class="instagram-wrapper center-header">
-          <h3>Instagram</h3>
-          <div class="feed">
-            <?php echo do_shortcode('[instagram-feed feed=0]'); ?>
-          </div>
+            <h3>Instagram</h3>
+              <div class="feed">
+                <?php echo do_shortcode('[instagram-feed feed=0]'); ?>
+              </div>
         </div>
       </section>
     </main>
