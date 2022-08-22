@@ -9,6 +9,7 @@ if($parent_slug === "positionen")
   <?php get_header('positionen'); ?>
   <main class="positionen-content">
     <div class="wrapper">      
+      <h1><?php echo 'Positionen!'?></h1>
       <section class="positionen-intro clearfix">
         <h1><?php the_title(); ?></h1>
 
@@ -105,6 +106,7 @@ else
   <?php get_header(); ?>
   <main class="site-content">
     <div class="wrapper">
+      <h1><?php echo 'Normale Seite!'?></h1>
       <section class="content-intro clearfix">
         <h2><?php the_title(); ?></h2>
         <?php the_content(); ?>
