@@ -7,6 +7,8 @@ function gk_register_widget()
   
 }
 
+remove_filter('the_content','wpautop');
+
 add_action('widgets_init', 'gk_register_widget');
 
 function register_gk_styles() { 

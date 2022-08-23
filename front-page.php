@@ -59,23 +59,30 @@
                   <div class="post-overlay">
                     <div class="post-info">
                       <!-- exclude all categories that are sub of 'position'-->
-                      <?php $categories = get_the_category(); ?>
+                      <!--<?php $categories = get_the_category(); ?>
                       <h3>
                         <ul class="post-categories">
-                          <?php foreach($categories as $category){ ?>
-                            <?php 
+                          < ?php foreach($categories as $category){ ?>
+                            < ?php 
                               $cat_parent_id = $category->category_parent;
                               
                               #$cat_parent = get_the_category_by_ID( $cat_parent_id );
                               if( $cat_parent_id != 14 )
                               {
                             ?>
-                            <li><a href="<?php echo get_category_link($category->term_id);?>"><?php echo $category->name ?></a></li>
-                            <?php } ?>
-                          <?php }?>
+                            <li><a href="< ?php echo get_category_link($category->term_id);?>"><?php echo $category->name ?></a></li>
+                            < ?php } ?>
+                          < ?php }?>
                         </ul>
-                      </h3>
+                      </h3>-->
+                      <h3><?php the_date(); ?></h3>
                       <h2><?php the_title(); ?></h2>
+                      <p>
+                        <?php 
+                          $content = get_the_content();
+                          echo wp_filter_nohtml_kses( $content );
+                          ?>
+                      </p>
                     </div>
                   </div>
                   <a href="<?php the_permalink(); ?>"><span></span></a>
@@ -87,35 +94,7 @@
           </div>
         </div>
 
-        <!--
-        <div class="date-wrapper">
-              <div class="events">
-                < ?php 
-                  $events = tribe_get_events( array('ends_after' => 'now') );
-
-                  foreach( $events as $event )
-                  {
-                    setup_postdata( $event );
-                  
-                ?>
-                <span>< ?php echo 'break 12'; ?></span>
-                <div class="event">
-                  <h2 class="event-date">
-                    < ?php echo tribe_get_start_date( $event ); ?>
-                  </h2>
-                  <h1 class="event-title">
-                    < ?php echo $event->post_title; ?>
-                  </h1>
-                  <a class="event-link" href="< ?php echo tribe_get_event_link( $event ); ?>">
-                    <div class="event-button">
-                      Details ansehen
-                    </div>
-                  </a>
-                </div>
-
-                < ?php }?>
-              </div>
-        </div>-->
+        
 
         <div class="positionen-wrapper center-header">
           <div class="center-section">
@@ -193,3 +172,33 @@
 
 
     <?php get_footer(); ?>
+
+    <!--
+        <div class="date-wrapper">
+              <div class="events">
+                < ?php 
+                  $events = tribe_get_events( array('ends_after' => 'now') );
+
+                  foreach( $events as $event )
+                  {
+                    setup_postdata( $event );
+                  
+                ?>
+                <span>< ?php echo 'break 12'; ?></span>
+                <div class="event">
+                  <h2 class="event-date">
+                    < ?php echo tribe_get_start_date( $event ); ?>
+                  </h2>
+                  <h1 class="event-title">
+                    < ?php echo $event->post_title; ?>
+                  </h1>
+                  <a class="event-link" href="< ?php echo tribe_get_event_link( $event ); ?>">
+                    <div class="event-button">
+                      Details ansehen
+                    </div>
+                  </a>
+                </div>
+
+                < ?php }?>
+              </div>
+        </div>-->

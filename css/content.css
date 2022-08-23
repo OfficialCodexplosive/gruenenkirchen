@@ -62,9 +62,11 @@ content.css
     transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
-    
     padding: 20% 0;
     text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
   }
 
   .date-wrapper
@@ -90,6 +92,7 @@ content.css
   .positionen-wrapper .section
   {
     padding: 0;
+    height:fit-content;
   }
 
 
@@ -167,12 +170,12 @@ content.css
     justify-items: center;
     padding: 2% 1%;
     width: 100%;
-    height: 100%;
+    flex: 1 1 auto;
   }
 
   .section > .post
   {
-    flex: 1;
+    flex: 1 0;
     margin: 0 1% 0 0;
     background-color: var(--main-color);
     z-index: 0;
@@ -182,6 +185,8 @@ content.css
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    display: flex;
+    flex-flow: column;
   }
 
   .img-wrapper
@@ -191,6 +196,7 @@ content.css
     margin: 0;
     padding-top: 56.25%;
     position: relative;
+    flex: 0 1 auto;
   }
 
   .img-wrapper > img
@@ -213,11 +219,34 @@ content.css
     box-shadow: rgba(0, 0, 0, 0.14) 0px 10px 20px, rgba(0, 0, 0, 0.18) 0px 6px 6px;
   }
 
+  .post-overlay
+  {
+    overflow: hidden;
+    z-index: 1;
+    background-color: #fff;
+    color: #000;
+    flex: 1 1 auto;
+  }
+
+  .post-info
+  {
+    text-align: left;
+    padding: 40px;
+    font-size: var(--font-size-regular);
+  }
+
+  .post-info > *
+  {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
   
   .post-info > h2
   {
     margin-top: .25rem;
-    font-size: 12pt;
+    font-size: var(--font-size-medium);
     text-transform: uppercase;
     font-weight: 700;
     color: #000;
@@ -226,9 +255,14 @@ content.css
 
   .post-info > h3
   {
-    font-size: 9pt;
+    font-size: var(--font-size-small);
     text-transform: uppercase;
     font-weight: 300;
+  }
+
+  .post-info > p
+  {
+    font-size: var(--font-size-regular);
   }
   
   .site-content a[href^="http"]::after
@@ -245,15 +279,6 @@ content.css
   .section .post-categories a
   {
     color: var(--accent1-color);
-  }
-  
-  .post-overlay
-  {
-    height: 100%;
-    overflow: hidden;
-    z-index: 1;
-    background-color: #fff;
-    color: #000;
   }
 
   /* Daten/ Events */
