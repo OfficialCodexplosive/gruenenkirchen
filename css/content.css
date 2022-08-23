@@ -92,7 +92,6 @@ content.css
   .positionen-wrapper .section
   {
     padding: 0;
-    height:fit-content;
   }
 
 
@@ -112,9 +111,8 @@ content.css
 
   .positionen-gallery > li
   {
-    width: 33.333%;
+    flex: 1 1 33.333333%;
     position: relative;
-    height: 20vh;
   }
 
   .positionen-gallery > li:hover span
@@ -126,9 +124,8 @@ content.css
   {
     object-fit: cover;
     width: 100%;
-    height: 20vh;
+    height: 22vh;
     vertical-align: middle;
-    transition: all .25s ease;
   }
 
   .positionen-gallery > li:hover .overlay
@@ -158,6 +155,11 @@ content.css
     padding: .75em 1em;
     text-align: center;
     transition: all .25s ease;
+  }
+
+  .btn-more
+  {
+
   }
 
   /* Aktuelles-Abschnitt */

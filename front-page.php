@@ -157,7 +157,7 @@
                 </li>
               </ul>
               </div>
-              <a href="#">Alle Positionen</a>
+              <a class="btn-more" href="#">Alle Positionen</a>
             </div>
           </div>
 

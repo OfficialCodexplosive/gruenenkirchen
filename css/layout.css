@@ -324,26 +324,26 @@ body
   /* Partnerschaften */
   .partnerships
   {
+    display: flex;
+    flex-flow: column;
     position: relative;
     padding: 12.5vh 0;
     margin-top: -1rem;
     height: 50vh;
     width: 100%;
     background-color: var(--offwhite-color);
+    justify-content: center;
   }
 
   .partnerships ul
   {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    flex: 0 1;
     display: flex;
-    align-items: stretch; /* Default */
-    justify-content: space-between;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     gap: 15px;
     width: 100%;
-    margin: 7.5vh 0;
-    padding: 0 20vw;
+    margin: 0;
   }
 
   .partnerships ul li
