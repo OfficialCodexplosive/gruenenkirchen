@@ -118,3 +118,39 @@ details summary > *
 {
     display: inline;
 }
+
+.not-summary .wp-block-file
+{
+    padding: 1em 0 0 0;
+}
+
+.not-summary .wp-block-file a
+{
+    font-style: italic;
+    color: var(--positionen-text-dark-color);
+}
+
+.wp-block-file__button
+{
+    display: none;
+}
+
+.position.post-wrapper
+{
+    background-color: transparent;
+}
+
+.position.post-wrapper .center-section > h3
+{
+    color: var(--footer-bg);
+}
+
+.position.post-wrapper .center-section *
+{
+    color: var(--positionen-text-color);
+}
+
+.position.post-wrapper .post
+{
+    background-color: var(--positionen-text-color);
+}

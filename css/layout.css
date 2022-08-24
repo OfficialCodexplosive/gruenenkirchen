@@ -56,12 +56,12 @@ body
 
   .landing-intro h1
   {
-    font-weight: 300;
+    font-weight: var(--font-weight-small);
   }
 
   .landing-intro h2
   {
-    font-weight: 600;
+    font-weight: var(--font-weight-medium);
   }
 
   .landing-intro
@@ -167,7 +167,7 @@ body
 
   /* Grundlegende Gestaltung der Fußzeile aus Teil 1 (inkl. font-size kleiner) */
   .site-footer {
-    font-size: smaller;
+    font-size: var(--font-size-small);
     background-color: var(--footer-bg); 
     padding: 1rem 0; /* ohne horizontales Padding */  
     /* margin-top: 2rem; */
@@ -262,8 +262,8 @@ body
     background-color: var(--main-color);
     text-decoration: none;
     color: #fff;
-    font-size: .7em;
-    font-weight: 300;
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-small);
     padding: .7em 1.6em;
     transition: all .2s ease;
   }
@@ -331,7 +331,7 @@ body
     margin-top: -1rem;
     height: 50vh;
     width: 100%;
-    background-color: var(--offwhite-color);
+    background-color: #fff;
     justify-content: center;
   }
 
@@ -365,19 +365,19 @@ body
     align-items: center;
   }
 
-  ul li .call-to-action
+  .call-to-action
   {
     display: block;
     flex: 0 0 auto;
     color: #fff;
     font-family: 'Roboto';
-    font-weight: 300;
+    font-weight: var(--font-weight-small);
     padding: 2vw 5vw;
     background-color: var(--main-color);
     transition: all .2s ease;
   }
 
-  ul li .call-to-action:hover
+  .call-to-action:hover
   {
     color: #fff;
     background-color: var(--accent1-dark-color);

@@ -51,7 +51,7 @@ content.css
   {
     position: relative;
     height: 100vh;
-    background-color: red;
+    background-color: rgba(var(--main-value-pair), .05);
   }
   
   .center-section
@@ -79,7 +79,7 @@ content.css
 
   .positionen-wrapper
   {
-    background-color: orange;/*var(--offwhite-color);*/
+    background-color: #fff;/*var(--offwhite-color);*/
     position: relative;
     height: 100vh;
   }
@@ -91,7 +91,7 @@ content.css
 
   .positionen-wrapper .section
   {
-    padding: 0;
+    padding: 2% 0;
   }
 
 
@@ -102,8 +102,8 @@ content.css
     justify-content: center;
     align-content: flex-start;
     list-style: none;
-    font-weight: 300;
-    font-size: .9em;
+    font-weight: var(--font-weight-small);
+    font-size: var(--font-size-small);
     text-transform: uppercase;
     margin: 0; 
     padding: 0;
@@ -155,11 +155,25 @@ content.css
     padding: .75em 1em;
     text-align: center;
     transition: all .25s ease;
+    font-weight: var(--font-weight-regular);
+  }
+
+  .btn-wrap
+  {
+    width: 100%;
+    text-align: center;
   }
 
   .btn-more
   {
-
+    display: inline-block;
+    font-size: var(--font-size-regular);
+    font-family: 'Roboto';
+    font-weight: var(--font-weight-small);
+    color: white;
+    background-color: var(--main-color);
+    padding: .5rem 2rem;
+    width: fit-content;
   }
 
   /* Aktuelles-Abschnitt */
@@ -215,7 +229,7 @@ content.css
     margin: 0;
   }
 
-  .section > div:hover
+  .section > .post:hover
   {
     transform: translateY(-10px);
     box-shadow: rgba(0, 0, 0, 0.14) 0px 10px 20px, rgba(0, 0, 0, 0.18) 0px 6px 6px;
@@ -241,17 +255,27 @@ content.css
   {
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 6;
+    font-family: 'Roboto';
+  }
+
+  .post-info > p
+  {
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+  }
+
+  .post-info > h2
+  {
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
   }
 
   
   .post-info > h2
   {
-    margin-top: .25rem;
     font-size: var(--font-size-medium);
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: var(--font-weight-medium);
     color: var(--main-color);
     overflow-wrap: break-word;
   }
@@ -260,7 +284,8 @@ content.css
   {
     font-size: var(--font-size-small);
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: var(--font-weight-small);
+    margin-bottom: 0;
   }
 
   .post-info > p
@@ -308,19 +333,19 @@ content.css
 
   .event-title, .event-button
   {
-    font-size: .75rem;
+    font-size: var(--font-size-small);
   }
 
   .event-date
   {
-    font-size: .6rem;
-    font-weight: 400;
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-regular);
     color: var(--offwhite-accent-color);
   }
 
   .event-title
   {
-    font-weight: 800;
+    font-weight: var(--font-weight-large);
     color: var(--main-color);
   }
 
@@ -328,7 +353,7 @@ content.css
   {
     background-color: var(--accent1-color);
     position: absolute;
-    font-weight: 400;
+    font-weight: var(--font-weight-regular);
     bottom: 1.5vw;
     padding: .4rem;
     transition: background-color .2s ease-out;
@@ -351,6 +376,7 @@ content.css
   {
     width: 100%;
     padding: 10vh 5vh;
+    background-color: rgba(var(--main-value-pair), .05);
   }
 
   .feed

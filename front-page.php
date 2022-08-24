@@ -52,14 +52,14 @@
                 <?php else : ?>
                   <?php $image = array(''); ?>
                 <?php endif; ?>
-                <div class="post">
+                <a class="post" href="<?php the_permalink(); ?>">
                   <div class="img-wrapper">
                     <img src="<?php echo $image[0]; ?>"/>
                   </div>
                   <div class="post-overlay">
                     <div class="post-info">
                       <!-- exclude all categories that are sub of 'position'-->
-                      <!--<?php $categories = get_the_category(); ?>
+                      <!--< ?php $categories = get_the_category(); ?>
                       <h3>
                         <ul class="post-categories">
                           < ?php foreach($categories as $category){ ?>
@@ -85,12 +85,13 @@
                       </p>
                     </div>
                   </div>
-                  <a href="<?php the_permalink(); ?>"><span></span></a>
-                </div>
+                </a>
                 <?php endwhile; ?>
               <?php endif; ?>
             </div>
-            <a href="#">Mehr</a>
+            <div class="btn-wrap">
+              <a class="call-to-action btn-more" href="./beitraege">Mehr</a>
+            </div>
           </div>
         </div>
 
@@ -157,7 +158,9 @@
                 </li>
               </ul>
               </div>
-              <a class="btn-more" href="#">Alle Positionen</a>
+              <div class="btn-wrap">
+                <a class="call-to-action btn-more" href="#">Alle Positionen</a>
+              </div>
             </div>
           </div>
 

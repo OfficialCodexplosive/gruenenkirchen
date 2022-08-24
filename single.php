@@ -53,10 +53,10 @@
           -->
 
           <div id="post-content" class="has-padding has-side-column">
-            <div class="flexcol side-column">
+            <!--<div class="flexcol side-column">
               <a href="#" class="participate">Mitmachen</a>
             </div>
-            <div class="flexcol separator"></div>
+            <div class="flexcol separator"></div>-->
             <div class="flexcol main-column">
               <?php the_content(); ?>
             </div>
@@ -69,27 +69,38 @@
           <?php }?>
           <?php  $comma_separated_cat = substr($comma_separated_cat, 1)?>
           <?php $matching_posts = get_posts( array( 'category' => $comma_separated_cat, 'posts_per_page' => 3, 'exclude' => array( $post->ID ) ) );?>
-        <?php if(count($matching_posts) !== 0): ?>
-          <section class="similar-content">
-            <div class="similiar-wrapper center-header">
+          <div class="single post-wrapper center-header">
+            <div class="center-section">
               <h3>Weiterlesen</h3>
-              <ul class="similar-gallery">
-                <?php foreach($matching_posts as $post) : setup_postdata( $post ); ?>
-                <li> 
-                  <a href="<?php the_permalink(); ?>">
-                    <?php if( has_post_thumbnail() ){ ?>
-                      <img src="<?php the_post_thumbnail_url( 'medium' );?>"/>
-                    <?php } else {?>
-                      <div class="img-replacement"></div>
-                    <?php }?>
-                    <div class="banner"><span><?php the_title(); ?></span></div>
-                  </a> 
-                </li>
-                <?php endforeach; wp_reset_postdata();?>
-              </ul>
+              <div class="section">
+                <?php
+                  $the_query = new WP_Query( array( 'category' => $comma_separated_cat, 'posts_per_page' => 3, 'exclude' => array( $post->ID ) ) );
+                ?>
+                <?php 
+                if ( $the_query->have_posts() ) : 
+                  while ( $the_query->have_posts() ) : $the_query->the_post(); 
+                    $count++;
+                ?>
+                  <?php if (has_post_thumbnail( get_the_ID() ) ): ?>
+                    <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'single-post-thumbnail' ); ?>
+                  <?php else : ?>
+                    <?php $image = array(''); ?>
+                  <?php endif; ?>
+                  <a class="post" href="<?php the_permalink(); ?>">
+                    <div class="img-wrapper">
+                      <img src="<?php echo $image[0]; ?>"/>
+                    </div>
+                    <div class="post-overlay">
+                      <div class="post-info">
+                        <h2><?php the_title(); ?></h2>
+                      </div>
+                    </div>
+                  </a>
+                  <?php endwhile; ?>
+                <?php endif; ?>
+              </div>
             </div>
-          </section>
-        <?php endif; ?>
+          </div>
         <!--
         <section class="has-padding">
          < ?php comment_form(); ?>
