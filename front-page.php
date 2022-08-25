@@ -167,7 +167,7 @@
         <div class="instagram-wrapper center-header">
             <h3>Instagram</h3>
               <div class="feed">
-                <?php echo do_shortcode('[instagram-feed feed=0]'); ?>
+                <?php echo do_shortcode('[instagram-feed feed=1]'); ?>
               </div>
         </div>
       </section>
