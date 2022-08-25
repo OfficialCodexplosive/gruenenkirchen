@@ -59,6 +59,7 @@ style.css
   --positionen-text-dark-color: var(--main-desaturated-dark-color);
   --positionen-bg: var(--main-lighter-color);
 
+  --font-size-smaller: 0.6rem;
   --font-size-small: 0.8rem;
   --font-size-regular: 1rem;
   --font-size-medium: 1.2rem;

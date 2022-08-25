@@ -189,28 +189,6 @@ content.css
     flex: 1 1 auto;
   }
 
-  .post-wrapper.all
-  {
-    min-height: 0;
-  }
-
-  .post-wrapper.all > .center-section
-  {
-    display: block;
-    padding: 0;
-    min-height: 0;
-  }
-
-  .post-wrapper.all .section > .post
-  {
-    flex: 0 0 22.5%;
-  }
-
-  .post-wrapper.all .section
-  {
-    flex-wrap: wrap;
-  }
-
   .section > .post
   {
     flex: 1 0;
@@ -314,7 +292,150 @@ content.css
   {
     font-size: var(--font-size-regular);
   }
-  
+
+  .site-content.site-all
+  {
+    flex: unset;
+    position: relative;
+    margin: 0;
+  }
+
+  .site-content.site-all .wrapper
+  {
+    min-height: 0;
+  }
+
+  .post-wrapper.all
+  {
+    height: auto;
+  }
+
+  .post-wrapper.all .center-section
+  {
+    position: relative;
+    transform: none;
+    top: unset;
+    left: unset;
+    height: auto;
+    width: 100%;
+    padding: 0;
+    display: block;
+    flex-flow: unset;
+  }
+
+  .post-wrapper.all .center-section .section
+  {
+    display: block;
+    flex-direction: unset;
+    flex-wrap: unset;
+    padding: 0;
+    width: 100%;
+    flex: unset;
+  }
+
+  .post-wrapper.all .center-section .section > .post:hover
+  {
+    transform: none;
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  .post-wrapper.all .center-section .section > .post > .post-overlay 
+  {
+    transition: all .1s ease-in-out;
+  }
+
+  .post-wrapper.all .center-section .section > .post:hover > .post-overlay 
+  {
+    background-color: rgba(var(--main-value-pair), .9);
+  }
+
+  .post-wrapper.all .center-section .section > .post:hover > .post-overlay > .post-info > *
+  {
+    color: #fff;
+  }
+
+  .post-wrapper.all .center-section .section > .post > .post-overlay > .post-info
+  {
+    padding: 30px;
+  }
+
+  .post-wrapper.all .center-section .section > .post
+  {
+    display: table;
+    position: relative;
+    margin: 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(var(--main-value-pair), .9);
+    height: 10%;
+  }
+
+  .post-wrapper.all .center-section .section > .post:after
+  {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .post-wrapper.all .center-section .section .post > *
+  {
+    float: left;
+    padding: 0;
+  }
+
+  .post-wrapper.all .center-section > h3
+  {
+    padding: 2em 0 1em 0;
+  }
+
+  .post-wrapper.all .center-section .section > .post > .post-overlay > .post-info > h3
+  {
+    font-size: var(--font-size-small);
+  }
+
+  .post-wrapper.all .center-section .section > .post > .post-overlay > .post-info > h2
+  {
+    font-size: var(--font-size-regular);
+  }
+
+  .post-wrapper.all .center-section .section > .post > .post-overlay > .post-info > p
+  {
+    font-size: var(--font-size-small);
+    margin: 0;
+  }
+
+  .site-all .wrapper
+  {
+    padding: 0;
+  }
+
+  /*
+
+  .post-wrapper.all .center-section .section .post > .img-wrapper
+  {
+    width: 25%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }  
+
+  .post-wrapper.all .center-section .section .post > .img-wrapper > img
+  {
+    position: relative;
+    top: unset;
+    left: unset;
+    transform: none;
+  }  
+
+  .post-wrapper.all .center-section .section .post > .post-overlay
+  {
+    width: 75%;
+  }  
+  */
+  .post-wrapper.all .center-section .section .post > .post-overlay
+  {
+    width: 100%;
+  }  
   .site-content a[href^="http"]::after
   {
     content: none;
