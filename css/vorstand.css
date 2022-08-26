@@ -1,0 +1,12 @@
+.vorstand-row
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.vorstand-row .child-portrait
+{
+    flex: 0 0 350px;
+}

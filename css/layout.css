@@ -154,7 +154,6 @@ body
   /* Zeilenabstand auf das anderthalbfache der Schriftgröße */
   .site-content {
     line-height: 1.5;
-    margin-bottom: 1rem; 
     
     /* Sticky Footer Variante 1: Inhaltsbereich wächst und drückt den Footer nach unten */   
     /* für IE11 mit auto (siehe https://pmueller.de/flexbox-ie-flex1/) */ 

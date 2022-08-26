@@ -7,7 +7,11 @@ function gk_register_widget()
   
 }
 
+add_post_type_support( 'page', 'excerpt' );
+
 remove_filter('the_content','wpautop');
+remove_filter('the_excerpt','wpautop');
+remove_filter('the_title','wpautop');
 
 add_action('widgets_init', 'gk_register_widget');
 

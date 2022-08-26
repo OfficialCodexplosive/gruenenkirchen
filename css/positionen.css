@@ -3,7 +3,6 @@
     font-family: 'Roboto';
     text-align: center;
     background-color: var(--positionen-bg);
-    height: 100%;
     width: 100%;
     padding: 0 12vw;
     color: var(--positionen-text-color);
@@ -57,12 +56,11 @@ ul
 
 .antrag-content
 {
-    padding-top: 16vh;
+    padding: 40px 0;
 }
 
 .antrag-content ul
 {
-    margin-top: 8vh;
 }
 
 details
@@ -138,11 +136,23 @@ details summary > *
 .position.post-wrapper
 {
     background-color: transparent;
+    padding: 40px 0;
+    height: auto;
 }
 
-.position.post-wrapper .center-section > h3
+.positionen-content h3
 {
-    color: var(--footer-bg);
+    color: var(--positionen-text-color);
+}
+
+.position.post-wrapper .center-section
+{
+    position: relative;
+    top: unset;
+    left: unset;
+    transform: none;
+    height: auto;
+    padding: 0;
 }
 
 .position.post-wrapper .center-section *
