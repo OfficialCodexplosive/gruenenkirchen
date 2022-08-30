@@ -312,6 +312,7 @@ content.css
   .post-wrapper.all
   {
     height: auto;
+    padding: 0;
   }
 
   .post-wrapper.all .center-section

@@ -1,12 +1,30 @@
-.vorstand-row
+#vorstand-header
 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    position: relative;
 }
 
-.vorstand-row .child-portrait
+#vorstand-header .column.portrait
 {
-    flex: 0 0 350px;
+    flex: 40%;
+    height: 100%;
+}
+
+#vorstand-header .column.content
+{
+    flex: 60%;
+}
+
+#vorstand-header #vorstand-thumbnail
+{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
 }

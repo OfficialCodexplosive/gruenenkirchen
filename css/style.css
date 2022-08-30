@@ -33,6 +33,8 @@ style.css
 
 @import url(positionen.css);
 
+@import url(vorstand.css);
+
 :root
 {
   --main-color: rgb(70, 149, 43);
