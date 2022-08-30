@@ -328,7 +328,6 @@ body
     position: relative;
     padding: 12.5vh 0;
     margin-top: -1rem;
-    height: 50vh;
     width: 100%;
     background-color: #fff;
     justify-content: center;
@@ -351,7 +350,6 @@ body
     flex: 0 1 auto; /* Default */
     list-style-type: none;
     width: 13vw;
-    height: 13vw;
   }
 
   .partnerships ul div
