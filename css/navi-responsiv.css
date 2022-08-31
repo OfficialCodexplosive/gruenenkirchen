@@ -53,16 +53,35 @@ a
     color: var(--positionen-text-color);
   }
 
+  .site-nav.no-background
+  {
+    
+    background: #fff;
+    color: var(--accent2-color);
+  }
+
   .site-nav.transparent-background #site-nav-logo, .site-nav.transparent-background .brand-icon
   {
     
     filter: brightness(0) saturate(100%) invert(45%) sepia(31%) saturate(441%) hue-rotate(60deg) brightness(95%) contrast(82%);
   }
 
+  .site-nav.no-background #site-nav-logo, .site-nav.no-background .brand-icon
+  {
+    
+    filter: brightness(0) saturate(100%) invert(17%) sepia(5%) saturate(1823%) hue-rotate(162deg) brightness(92%) contrast(81%);
+  }
+
   .site-nav.transparent-background li.site-nav-participate a
   {
     background-color: transparent;
     color: var(--positionen-text-color);
+  }
+
+  .site-nav.no-background li.site-nav-participate a
+  {
+    background-color: var(--accent2-color);
+    color: #fff;
   }
 
   .site-nav.transparent-background li.site-nav-participate #site-nav-border-participate

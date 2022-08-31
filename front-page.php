@@ -14,7 +14,7 @@
             <h1>GEILENKIRCHEN</h1>
             <h2><?php bloginfo('description');?></h2>
             <div id="landing-text-link-separator"></div>
-            <a href="#">MEHR ERFAHREN</a>
+            <a href="#aktuelles">MEHR ERFAHREN</a>
         </div>
       </section>
 
@@ -27,9 +27,9 @@
               <li><div style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/ichkaufelokal.svg');"></div></li>
               <li><div style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/bluetenparadies.svg');"></div></li>
               -->
-              <li><div><a href="#" class="call-to-action">Spenden</a></div></li>
-              <li><div><a href="#" class="call-to-action">Mitglied werden</a></div></li>
-              <li><div><a href="#" class="call-to-action">Aktiv werden</a></div></li>
+              <li><div><a href="./spenden" class="call-to-action">Spenden</a></div></li>
+              <li><div><a href="./mitglied-werden" class="call-to-action">Mitglied werden</a></div></li>
+              <li><div><a href="./aktiv-werden" class="call-to-action">Aktiv werden</a></div></li>
             </ul>
       </section>
       
@@ -37,7 +37,7 @@
         
         <div class="post-wrapper center-header">
           <div class="center-section">
-            <h3>Aktuelles</h3>
+            <h3 id="aktuelles">Aktuelles</h3>
             <div class="section">
               <?php
                 $the_query = new WP_Query( array('posts_per_page' => 3,) );
@@ -159,7 +159,7 @@
               </ul>
               </div>
               <div class="btn-wrap">
-                <a class="call-to-action btn-more" href="#">Alle Positionen</a>
+                <a class="call-to-action btn-more" href="./positionen">Alle Positionen</a>
               </div>
             </div>
           </div>

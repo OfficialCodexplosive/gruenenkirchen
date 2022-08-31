@@ -37,6 +37,8 @@ style.css
 
 @import url(default_page.css);
 
+@import url(404.css);
+
 :root
 {
   --main-color: rgb(70, 149, 43);

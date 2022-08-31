@@ -33,13 +33,20 @@ content.css
     content: " \29c9"; 
   }  
 
+  .site-positionen .center-section > h2
+  {
+    font-family: 'Archivo', sans-serif;
+    font-weight: var(--font-weight-small);
+    color: var(--footer-bg);
+  }
+
   .center-header > h3, .site-content .center-header > * > h3, .positionen-content .center-header > * > h3
   {
     text-align: center;
   }
 
   .center-header > h3, .site-content .center-header > * > h3, .positionen-content .center-header > * > h3,
-  #vorstand-header .column.content h1, #vorstand-header .column.content h2
+  #vorstand-header .column.content h1, #vorstand-header .column.content h2, .site-default h2, .site-positionen .center-section h3
   {
     font-family: 'Archivo', sans-serif;
     font-weight: 900;
@@ -47,7 +54,7 @@ content.css
   }
 
   .site-content .center-header > * > h3, .center-header > h3,
-  #vorstand-header .column.content h1, #vorstand-header .column.content h2
+  #vorstand-header .column.content h1, #vorstand-header .column.content h2, .site-default *, .site-positionen .center-section h3
   {
     color: var(--footer-bg);
   }

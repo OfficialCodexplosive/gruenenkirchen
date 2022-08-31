@@ -1,3 +1,70 @@
+/* Positionen */
+.site-positionen
+{
+    padding: 5rem 0;
+}
+
+.site-positionen .center-section > h3
+{
+    margin: 0;
+}
+
+.site-positionen .center-section > h2
+{
+    font-size: var(--font-size-regular);
+}
+
+.positionen-row
+{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 70%;
+    gap: 1rem;
+    justify-items: center;
+}
+
+.positionen-row > .pos-portrait
+{
+    flex: 30%;
+    display: flex;
+    overflow: hidden;
+    flex-flow: column;
+    margin-top: 1rem;
+    transition: all .2s ease-out;
+}
+
+.positionen-row > .pos-portrait:hover
+{
+    transform: translateY(-10px);
+    box-shadow: rgb(0 0 0 / 14%) 0px 10px 20px, rgb(0 0 0 / 18%) 0px 6px 6px;
+}
+
+.positionen-row > .pos-portrait > .post-overlay
+{
+    height: auto;
+}
+
+
+.positionen-row > .pos-portrait > .post-overlay > .post-info > h2
+{
+    margin: 0;
+    font-family: 'Roboto';
+    font-weight: var(--font-weight-small);
+    text-transform: capitalize;
+}
+
+.pos-thumb
+{
+    width: 100%;
+}
+
+.pos-title
+{
+}
+
+/* Positionen-Children  */
 .positionen-content
 {
     font-family: 'Roboto';

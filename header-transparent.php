@@ -21,7 +21,7 @@
   
   <body <?php body_class( $bodyclass); ?>>
 
-    <nav class="site-nav">
+    <nav class="site-nav no-background">
       <div class="wrapper">
         
         <button class="menubutton" onclick="this.classList.toggle('show-menu')">

@@ -46,8 +46,8 @@
           <div class="site-nav-separator"></div>
           <div class="menu-all-pages-container">
             <ul class="site-nav-list right">
-              <li><a href="#"><div class="brand-icon" style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/facebook_f.svg');"></div></a></li>
-              <li><a href="#"><div class="brand-icon" style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/instagram_outline.svg');"></div></a></li>
+              <li><a href="https://de-de.facebook.com/GrueneGeilenkirchen/"><div class="brand-icon" style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/facebook_f.svg');"></div></a></li>
+              <li><a href="https://www.instagram.com/gruene_gk/"><div class="brand-icon" style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/instagram_outline.svg');"></div></a></li>
               <li class="site-nav-participate">
                 <a href="<?php echo get_permalink( get_page_by_path( 'mitmachen' ) );?>">
                   <span id="site-nav-border-participate">Mitmachen</span>
