@@ -1,0 +1,36 @@
+.site-default .wrapper
+{
+    padding: 0;
+}
+
+.site-default .center-section
+{
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding: 0 20%;
+    font-family: 'Roboto';
+}
+
+.wp-block-quote
+{
+    font-family: 'Archivo';
+    font-weight: var(--font-weight-large);
+    border-left: 2px solid rgba(var(--offwhite-accent-value-pair), .5);
+    width: 60vw;
+    padding: 0 3rem;
+    text-align: center;
+}
+
+.wp-block-group
+{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    width: 100vw;
+    margin: 5% 0;
+}
+
+.site-default ul
+{
+    list-style-type: disc;
+}

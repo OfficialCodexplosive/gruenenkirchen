@@ -15,16 +15,7 @@ elseif($parent_slug === "vorstand")
 }
 else
 {?>  
-  <!-- Standardseiten-Layout -->
-  <?php get_header(); ?>
-  <main class="site-content">
-    <div class="wrapper">
-      <section class="content-intro clearfix">
-        <h2><?php the_title(); ?></h2>
-        <?php the_content(); ?>
-      </section>  
-    </div>
-  </main>
+  <?php include get_theme_file_path( '/page-default.php' ); ?>
 <?php }?>     
     
   
