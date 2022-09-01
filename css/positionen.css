@@ -60,10 +60,6 @@
     width: 100%;
 }
 
-.pos-title
-{
-}
-
 /* Positionen-Children  */
 .positionen-content
 {
@@ -124,10 +120,6 @@ ul
 .antrag-content
 {
     padding: 40px 0;
-}
-
-.antrag-content ul
-{
 }
 
 details

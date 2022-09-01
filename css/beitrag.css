@@ -156,11 +156,6 @@ body
     background-color: var(--accent1-dark-color);
 }
 
-.single.post-wrapper
-{
-    height: 50vh;
-}
-
 .single.post-wrapper .section
 {
     justify-content: space-evenly;
