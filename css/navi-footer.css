@@ -17,17 +17,18 @@
         color: var(--main-light-color);
     }
 
-    .site-footer > *
+    .site-footer > *, .post-template-default .site-footer .wrapper
     {
         padding: 30px 0;
     }
-    .site-footer .wrapper
+    .site-footer > .wrapper
     {
         display: flex;
         flex-direction: column;
         justify-content: center;
         text-align: center;
         background-color: var(--footer-bg);
+        padding: 30px 0;
     }
 
     .site-footer .sub-footer
