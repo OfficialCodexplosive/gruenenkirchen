@@ -4,8 +4,21 @@
       <section class="default-page">   
         <div class="post-wrapper default center-header">
             <div class="center-section">
-                <h3><?php echo the_title(); ?></h3>
-                <p><?php echo the_content(); ?></p>
+                <?php
+                  if( empty_content( get_post()->post_content ) ){
+                ?>
+                  <div class="empty-page">
+                    <div class="empty-image">
+                      <img src="<?php echo get_bloginfo('template_url') ?>/images/sad_flower.svg"/>
+                    </div>
+                    <h1>Diese Seite ist noch leer.</h1>
+                    <p>Keine Sorge, bald findest Du auch hier Inhalte, die Geilenkirchen ein wenig grüner machen!</p>
+                    <a href="javascript:history.back()">Zurück</a>
+                  </div>
+                <?php } else {?>
+                  <h3><?php echo the_title(); ?></h3>
+                  <p><?php echo the_content(); ?></p>
+                <?php } ?>
             </div>
             <?php
                 if($post->post_name != "themen")
@@ -43,7 +56,8 @@
                   
             ?>
               <div class="center-section download-section">
-                <h3>Downloads</h3>
+                <div class="separator"></div>
+                <h2>Downloads</h2>
                 <?php
                   echo $downloads_page->post_content;
                 ?>

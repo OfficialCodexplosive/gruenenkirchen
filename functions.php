@@ -29,6 +29,10 @@ function register_gk_styles() {
    
 }
 
+function empty_content($str) {
+  return trim(str_replace('&nbsp;','',strip_tags($str))) == '';
+}
+
 
 function mytheme_comment($comment, $args, $depth) {
   if ( 'div' === $args['style'] ) {
