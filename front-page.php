@@ -50,7 +50,7 @@
                 <?php if (has_post_thumbnail( get_the_ID() ) ): ?>
                   <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'single-post-thumbnail' ); ?>
                 <?php else : ?>
-                  <?php $image = array(''); ?>
+                  <?php $image = array( get_bloginfo('template_url') . '/images/image_placeholder.png)' ); ?>
                 <?php endif; ?>
                 <a class="post" href="<?php the_permalink(); ?>">
                   <div class="img-wrapper">

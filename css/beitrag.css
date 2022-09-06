@@ -3,7 +3,7 @@ body
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-color: var(--offwhite-color);
+    background-color: rgba(var(--main-value-pair), .05)
 }
 
 .post-template-default .wrapper
