@@ -11,7 +11,7 @@ add_action( 'wp_enqueue_scripts', 'gk_content_articles' );
 function gk_content_articles($_content)
 {
   $string = $_content;
-  $pattern = '/<a(.*?)class="participate"(.*?)>(.*?)<\/a>/';
+  $pattern = '/<a(.*?)class="(.*?)participate(.*?)"(.*?)>(.*?)<\/a>/';
 
   preg_match_all($pattern, $string, $matches);
   $full_pattern_matches = $matches[0];
@@ -26,7 +26,7 @@ add_action( 'wp_enqueue_scripts', 'gk_content_without_articles' );
 function gk_content_without_articles($_content)
 {
   $string = $_content;
-  $pattern = '/<a(.*?)class="(.*?)participate(.*?)">(.*?)<\/a>/';
+  $pattern = '/<a(.*?)class="(.*?)participate(.*?)"(.*?)>(.*?)<\/a>/';
   $replacement = '';
   $repl_content = preg_replace($pattern, $replacement, $string);
   echo $repl_content;

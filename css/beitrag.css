@@ -154,11 +154,13 @@ body
     background-color: var(--main-color);
     padding: .5rem 1rem;
     transition: all .2s ease;
+    margin-bottom: .5rem;
 }
 
 .side-column .participate:hover
 {
-    background-color: var(--accent1-dark-color);
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px;
 }
 
 .single.post-wrapper .section
