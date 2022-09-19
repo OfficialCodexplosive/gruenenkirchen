@@ -31,13 +31,13 @@ body
     flex: 50%;
 }
 
-#post-header .column:first-of-type
+#post-header .column.text
 {
     padding-left: 5vw;
     padding-right: 2.5vw;
 }
 
-#post-header .column:last-of-type
+#post-header .column.thumb
 {
     height: 100%;
     padding-right: 5vw;
@@ -125,7 +125,12 @@ body
 
 .has-side-column .separator
 {
+    width: unset;
+    height: unset;
+    content: unset;
     flex: 0 0 1px;
+    background-color: var(--accent2-color);
+    margin: 0 5vw;
 }
 
 .separator

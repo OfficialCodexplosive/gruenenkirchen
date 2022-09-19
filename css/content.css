@@ -266,7 +266,6 @@ content.css
     text-align: left;
     padding: 40px;
     font-size: var(--font-size-regular);
-    line-height: 1.1;
   }
 
   .post-info > *

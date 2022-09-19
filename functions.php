@@ -7,13 +7,43 @@ function gk_register_widget()
   
 }
 
+add_action( 'wp_enqueue_scripts', 'gk_content_articles' );
+function gk_content_articles($_content)
+{
+  $string = $_content;
+  $pattern = '/<a(.*?)class="participate"(.*?)>(.*?)<\/a>/';
+
+  preg_match_all($pattern, $string, $matches);
+  $full_pattern_matches = $matches[0];
+
+  foreach($full_pattern_matches as $full_match)
+  {
+    echo $full_match;
+  }
+}
+
+add_action( 'wp_enqueue_scripts', 'gk_content_without_articles' );
+function gk_content_without_articles($_content)
+{
+  $string = $_content;
+  $pattern = '/<a(.*?)class="(.*?)participate(.*?)">(.*?)<\/a>/';
+  $replacement = '';
+  $repl_content = preg_replace($pattern, $replacement, $string);
+  echo $repl_content;
+}
+
+
+
 add_post_type_support( 'page', 'excerpt' );
 
 remove_filter('the_content','wpautop');
+
 remove_filter('the_excerpt','wpautop');
 remove_filter('the_title','wpautop');
 
 add_action('widgets_init', 'gk_register_widget');
+
+do_action('customize_register');
 
 function register_gk_styles() { 
     wp_enqueue_style( 'themestyle', get_stylesheet_uri() );

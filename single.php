@@ -8,7 +8,7 @@
           <?php the_post(); ?>   
 
           <div id="post-header" >
-            <div class="column">
+          <div class="column text">
               <div id="summary">
                 <h4>
                     <!-- exclude all categories that are sub of 'position'; WIP-->
@@ -36,9 +36,11 @@
               </div>
             </div>
 
-            <div class="column">
+            <div class="column thumb">
               <div id="post-thumbnail" style="background-image: url('<?php the_post_thumbnail_url( 'full' ); ?>');"></div>
-            </div>            
+            </div>
+            
+                        
           </div>
 
           
@@ -53,12 +55,17 @@
           -->
 
           <div id="post-content" class="has-padding has-side-column">
-            <!--<div class="flexcol side-column">
+            <div class="flexcol side-column">
               <a href="#" class="participate">Mitmachen</a>
+              <?php 
+                gk_content_articles( get_the_content() );
+              ?>
             </div>
-            <div class="flexcol separator"></div>-->
+            <div class="flexcol separator"></div>
             <div class="flexcol main-column">
-              <?php the_content(); ?>
+              <?php 
+                gk_content_without_articles( get_the_content() );
+              ?>
             </div>
           </div>
         </section>       
