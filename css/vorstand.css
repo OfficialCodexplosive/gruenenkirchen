@@ -158,12 +158,12 @@
 
 #vorstand-contact .contact-form > form > .elem-group *:hover
 {
-    border-color: var(--accent1-color);
+    border-color: var(--accent1-dark-color);
 }
 
 #vorstand-contact .contact-form > form > .elem-group *:focus
 {
-    border-color: var(--accent1-color);
+    border-color: var(--accent1-dark-color);
     outline: none;
 }
 
@@ -179,7 +179,7 @@
 
 #vorstand-contact .contact-form > form > button:hover
 {
-    background-color: var(--accent1-color);
+    background-color: var(--accent1-dark-color);
 }
 
 #vorstand-contact .contact-form > form > .elem-group *, #vorstand-contact .contact-form > form > button
