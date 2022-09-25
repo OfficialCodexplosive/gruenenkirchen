@@ -6,22 +6,24 @@
     width: 100vw;
     align-items: flex-start;
     position: relative;
+    height: 91vh;
 }
 
 #vorstand-header .column:first-of-type
 {
-    padding: 0 10%;
+    padding: 0 5%;
 }
 
 #vorstand-header .column.portrait
 {
-    flex: 40%;
+    flex: 47.5%;
     height: 100%;
+    padding: 1.5em 3em;
 }
 
 #vorstand-header .column.content
 {
-    flex: 60%;
+    flex: 52.5%;
     padding-top: 5%;
 }
 
@@ -44,14 +46,214 @@
 
 #vorstand-header .column.content .personal
 {
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-regular);
+    font-weight: var(--font-weight-small);
     font-family: 'Roboto';
+}
+
+.site-vorstand
+{
+    padding: 5rem 0;
 }
 
 #vorstand-header #vorstand-thumbnail
 {
     width: 100%;
-    height: 90vh;
+    height: 100%;
     background-size: cover;
     background-position: center;
 }
+
+.vorstand-row
+{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+.vorstand-row > .child-portrait
+{
+    flex: 0 0 22.5%;
+    display: flex;
+    overflow: hidden;
+    flex-flow: column;
+    margin-top: 1rem;
+    transition: all .1s ease-out;
+    padding: 16px;
+}
+
+.vorstand-row > .child-portrait:hover
+{
+    background-color: var(--main-light-color);
+}
+
+.vorstand-row > a
+{
+    font-family: 'Roboto';
+}
+
+.child-portrait > .name
+{
+    font-family: 'Roboto';
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-medium);
+    color: var(--accent2-color);
+    margin-top: .5rem;
+}
+
+.child-portrait > .amt
+{
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-regular);
+    color: var(--main-color);
+    margin-top: .3rem;
+}
+
+.child-portrait > div
+{
+    text-align: left;
+}
+
+.img-wrapper.img-vorstand
+{
+    padding-top: 125%;
+}
+
+.img-wrapper.img-vorstand > img
+{
+    transition: transform .25s;
+    transform-origin: 550% 580%;
+}
+
+.vorstand-row > .child-portrait:hover .img-wrapper.img-vorstand > img
+{
+    transform: scale(1.1);
+}
+
+#vorstand-contact .contact-form
+{
+    width: 100%;
+}
+
+#vorstand-contact .contact-form > form > .elem-group
+{
+    display: flex;
+    margin: 1rem 0;
+    width: 100%;
+} 
+
+#vorstand-contact .contact-form > form > .elem-group *
+{
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid var(--main-color);
+    background-color: transparent;
+    border-radius: 0;
+    height: 2rem;
+    transition: all .2s ease-in-out;
+}
+
+#vorstand-contact .contact-form > form > .elem-group *:hover
+{
+    border-color: var(--accent1-color);
+}
+
+#vorstand-contact .contact-form > form > .elem-group *:focus
+{
+    border-color: var(--accent1-color);
+    outline: none;
+}
+
+#vorstand-contact .contact-form > form > button
+{
+    background-color: var(--main-color);
+    color: var(--offwhite-color);
+    padding: .5rem 1rem;
+    border: none;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+#vorstand-contact .contact-form > form > button:hover
+{
+    background-color: var(--accent1-color);
+}
+
+#vorstand-contact .contact-form > form > .elem-group *, #vorstand-contact .contact-form > form > button
+{
+    font-family: 'Roboto';
+    font-weight: var(--font-weight-small);
+    font-size: var(--font-size-small);
+} 
+
+#vorstand-contact .contact-form > form > .elem-group textarea
+{
+    height: 5rem;
+    resize: vertical;
+} 
+
+#vorstand-contact
+{
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    background-color: rgba(var(--footer-value-pair), .075);
+    padding: 48px 0;
+    color: var(--accent2-color);
+} 
+
+#vorstand-contact h2
+{
+    font-size: var(--font-size-mlarge);
+    font-family: 'Archivo';
+    font-weight: var(--font-weight-large);
+    line-height: 1.1;
+} 
+
+#vorstand-contact h3
+{
+    font-size: var(--font-size-regular);
+    font-family: 'Roboto';
+    font-weight: var(--font-weight-small);
+    line-height: 1.1;
+} 
+
+#vorstand-contact .column
+{
+    flex: 50%;
+    padding: 0 5rem;
+}
+
+#vorstand-contact .column:first-of-type
+{
+    padding: 1rem 3rem 0 5rem;
+}
+
+#vorstand-contact .column:last-of-type
+{
+    padding: 0 5rem 0 0;
+}
+
+/*
+#vorstand-contact .column:first-of-type
+{
+    padding: 0 10%;
+}
+
+#vorstand-contact .column.portrait
+{
+    flex: 40%;
+    height: 100%;
+}
+
+#vorstand-contact .column.content
+{
+    flex: 60%;
+    padding-top: 5%;
+}*/

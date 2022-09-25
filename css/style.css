@@ -57,7 +57,8 @@ style.css
   --offwhite-color: rgb(253, 252, 252);
   --offwhite-accent-color: rgb(138, 142, 144);
   --offwhite-accent-value-pair: 138,142,144;
-  --footer-color: rgb(101, 119, 119);
+  --footer-color: rgb(var(--footer-value-pair));
+  --footer-value-pair: 101,119,119;
   --footer-bg: rgb(53, 61, 65);
 
   --nav-height: 3.5rem;
@@ -72,6 +73,7 @@ style.css
   --font-size-regular: 1rem;
   --font-size-medium: 1.2rem;
   --font-size-large: 1.5rem;
+  --font-size-mlarge: 2rem;
   --font-size-xlarge: 2.5rem;
 
   --font-weight-smaller: 200;
@@ -79,4 +81,15 @@ style.css
   --font-weight-regular: 400;
   --font-weight-medium: 600;
   --font-weight-large: 800;
+}
+
+a
+{
+  color: var(--main-color);
+  transition: color .2s ease-in-out;
+}
+
+a:hover
+{
+  color: var(--accent1-color);
 }

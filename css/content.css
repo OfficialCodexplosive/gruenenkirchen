@@ -46,7 +46,8 @@ content.css
   }
 
   .center-header > h3, .site-content .center-header > * > h3, .positionen-content .center-header > * > h3,
-  #vorstand-header .column.content h1, #vorstand-header .column.content h2, .site-default h2, .site-positionen .center-section h3
+  #vorstand-header .column.content h1, #vorstand-header .column.content h2, .site-default h2, .site-positionen .center-section h3,
+  .site-vorstand .center-section h3
   {
     font-family: 'Archivo', sans-serif;
     font-weight: 900;
@@ -54,7 +55,8 @@ content.css
   }
 
   .site-content .center-header > * > h3, .center-header > h3,
-  #vorstand-header .column.content h1, #vorstand-header .column.content h2, .site-default *, .site-positionen .center-section h3
+  #vorstand-header .column.content h1, #vorstand-header .column.content h2, 
+  .site-default *, .site-positionen .center-section h3, .site-vorstand .center-section h3
   {
     color: var(--footer-bg);
   }
@@ -249,7 +251,7 @@ content.css
   .section > .post:hover
   {
     transform: translateY(-10px);
-    box-shadow: rgba(0, 0, 0, 0.14) 0px 10px 20px, rgba(0, 0, 0, 0.18) 0px 6px 6px;
+    box-shadow: rgba(78, 102, 69, 0.14) 0px 10px 20px, rgba(78, 102, 69, 0.18) 0px 6px 6px;
   }
 
   .post-overlay
