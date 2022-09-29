@@ -1,8 +1,10 @@
 <?php get_header(); ?>
+
   <main class="site-content site-vorstand">
     <div class="wrapper">
       <div class="center-section">
         <h3>Team Grün</h3>
+        <h2><?php echo $pagename; ?></h2>
         <!--<h2>Alle Beiträge</h2>-->
         <div class="vorstand-row">
           <?php

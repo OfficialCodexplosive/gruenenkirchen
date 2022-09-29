@@ -13,7 +13,15 @@ elseif($parent_slug === "vorstand")
 <?php include get_theme_file_path( '/page-vorstand-child.php' ); ?>
 <?php
 }
-else
+elseif($post_slug === "ratsfraktion")
+{?>
+<?php include get_theme_file_path( '/page-vorstand.php' ); ?>
+<?php }
+elseif($parent_slug === "ratsfraktion")
+{?>
+<?php include get_theme_file_path( '/page-vorstand-child.php' ); ?>
+<?php
+}else
 {?>  
   <?php include get_theme_file_path( '/page-default.php' ); ?>
 <?php }?>     

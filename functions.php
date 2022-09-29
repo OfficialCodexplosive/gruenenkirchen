@@ -56,7 +56,90 @@ function register_gk_styles() {
                         get_template_directory_uri() .'/js/script.js',   
                         null, false, true);
     wp_enqueue_script('gkscript');
+
+    wp_register_script('gkunfocus',
+                        get_template_directory_uri() .'/js/hide_unfocus.js',
+                        null, false, true);
+    wp_enqueue_script('gkunfocus');
    
+}
+
+add_shortcode( 'contact-form', 'display_contact_form' );
+
+function display_contact_form() {
+
+	$validation_messages = [];
+	$success_message = '';
+
+	if ( isset( $_POST['contact_form'] ) ) {
+
+		//Sanitize the data
+		$full_name = isset( $_POST['name'] ) ? sanitize_text_field( $_POST['name'] ) : '';
+		$email     = isset( $_POST['email'] ) ? sanitize_text_field( $_POST['email'] ) : '';
+		$message   = isset( $_POST['message'] ) ? sanitize_textarea_field( $_POST['message'] ) : '';
+
+		//Validate the data
+		if ( strlen( $full_name ) === 0 ) {
+			$validation_messages[] = 'Please enter a valid name.';
+		}
+
+		if ( strlen( $email ) === 0 or
+		     ! is_email( $email ) ) {
+			$validation_messages[] = 'Please enter a valid email address.';
+		}
+
+		if ( strlen( $message ) === 0 ) {
+			$validation_messages[] = 'Please enter a valid message.';
+		}
+
+		//Send an email to the WordPress administrator if there are no validation errors
+		if ( empty( $validation_messages ) ) {
+
+			$mail    = get_option( 'admin_email' );
+			$subject = 'New message from ' . $full_name;
+			$message = $message . ' - The email address of the customer is: ' . $mail;
+
+			wp_mail( $mail, $subject, $message );
+
+			$success_message = esc_html__( 'Your message has been successfully sent.', 'twentytwentyone' );
+
+		}
+
+	}
+
+	//Display the validation errors
+	if ( ! empty( $validation_messages ) ) {
+		foreach ( $validation_messages as $validation_message ) {
+			echo '<div class="validation-message">' . esc_html( $validation_message ) . '</div>';
+		}
+	}
+
+	//Display the success message
+	if ( strlen( $success_message ) > 0 ) {
+		echo '<div class="success-message">' . esc_html( $success_message ) . '</div>';
+	}
+
+	?>
+
+    <!-- Echo a container used that will be used for the JavaScript validation -->
+    <div id="validation-messages-container"></div>
+
+    <form action="<?php esc_url( $_SERVER['REQUEST_URI'] ) ?>" method="post">
+      <input type="hidden" name="contact_form">
+      <div class="elem-group">
+        <input type="text" id="name" name="name" placeholder="Name" pattern=[A-Z\sa-z]{3,20} required>
+      </div>
+      <div class="elem-group">
+        <input type="email" id="email" name="email" placeholder="E-Mail" required>
+      </div>
+      <div class="elem-group">
+        <textarea id="message" name="message" placeholder="Nachricht" required></textarea>
+      </div>
+      <button type="submit">Senden</button>
+    </form>
+
+	<?php
+
 }
 
 function empty_content($str) {

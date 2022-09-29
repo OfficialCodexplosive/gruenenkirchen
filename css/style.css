@@ -86,7 +86,7 @@ style.css
 a
 {
   color: var(--main-color);
-  transition: color .2s ease-in-out;
+  transition: all .2s;
 }
 
 a:hover

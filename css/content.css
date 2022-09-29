@@ -33,7 +33,7 @@ content.css
     content: " \29c9"; 
   }  
 
-  .site-positionen .center-section > h2
+  .site-positionen .center-section > h2, .site-vorstand .center-section h2
   {
     font-family: 'Archivo', sans-serif;
     font-weight: var(--font-weight-small);
