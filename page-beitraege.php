@@ -10,7 +10,7 @@
               /*'post_type'      => 'page',*/
               'posts_per_page' => -1,
               /*'post_parent'    => $post->ID,*/
-              'order'          => 'ASC',
+              'order'          => 'DESC',
           );
           $the_query = new WP_Query( $args );
           if ( $the_query->have_posts() ) : ?>

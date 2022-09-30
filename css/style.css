@@ -65,6 +65,7 @@ style.css
   --relative-logo-size: calc(var(--nav-height) * .62);
   
   --positionen-text-color: var(--main-desaturated-color);
+  --positionen-text-value-pair: var(--main-desaturated-value-pair);
   --positionen-text-dark-color: var(--main-desaturated-dark-color);
   --positionen-bg: var(--main-lighter-color);
 

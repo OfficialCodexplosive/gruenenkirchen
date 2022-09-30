@@ -174,7 +174,7 @@
     outline: none;
 }
 
-#vorstand-contact .contact-form > form > button
+#vorstand-contact .contact-form > form input[type="submit"]
 {
     background-color: var(--main-color);
     color: var(--offwhite-color);
@@ -184,12 +184,12 @@
     transition: all .2s ease-in-out;
 }
 
-#vorstand-contact .contact-form > form > button:hover
+#vorstand-contact .contact-form > form input[type="submit"]:hover
 {
     background-color: var(--accent1-dark-color);
 }
 
-#vorstand-contact .contact-form > form > .elem-group *, #vorstand-contact .contact-form > form > button
+#vorstand-contact .contact-form > form > .elem-group *, #vorstand-contact .contact-form > form input[type="submit"]
 {
     font-family: 'Roboto';
     font-weight: var(--font-weight-small);

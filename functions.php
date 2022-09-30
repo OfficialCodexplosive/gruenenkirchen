@@ -83,8 +83,7 @@ function display_contact_form() {
 			$validation_messages[] = 'Please enter a valid name.';
 		}
 
-		if ( strlen( $email ) === 0 or
-		     ! is_email( $email ) ) {
+		if ( strlen( $email ) === 0 ) {
 			$validation_messages[] = 'Please enter a valid email address.';
 		}
 
@@ -101,7 +100,7 @@ function display_contact_form() {
 
 			wp_mail( $mail, $subject, $message );
 
-			$success_message = esc_html__( 'Your message has been successfully sent.', 'twentytwentyone' );
+			$success_message = 'Your message has been successfully sent.';
 
 		}
 
@@ -124,7 +123,7 @@ function display_contact_form() {
     <!-- Echo a container used that will be used for the JavaScript validation -->
     <div id="validation-messages-container"></div>
 
-    <form action="<?php esc_url( $_SERVER['REQUEST_URI'] ) ?>" method="post">
+    <form action="" method="POST">
       <input type="hidden" name="contact_form">
       <div class="elem-group">
         <input type="text" id="name" name="name" placeholder="Name" pattern=[A-Z\sa-z]{3,20} required>
@@ -138,8 +137,7 @@ function display_contact_form() {
       <button type="submit">Senden</button>
     </form>
 
-	<?php
-
+<?php
 }
 
 function empty_content($str) {

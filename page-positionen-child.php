@@ -12,7 +12,8 @@
       </section>
     </div>
     <?php 
-      $args = array( 'tax_query' => array
+      $args = array( 
+        'tax_query' => array
         (
           'relation' => 'AND',
           array (
@@ -26,9 +27,12 @@
           'field' => 'slug'
           )
         ) );
-        $the_query = new WP_Query( $args );
-        
-        if ($the_query->have_posts()) :?>
+      $unsliced_query = new WP_Query( $args );
+
+      $args['posts_per_page'] = 3;
+      $the_query = new WP_Query( $args );
+    
+      if ($the_query->have_posts()) :?>
       <section class="antrag-content center-header">
         <h3>Anträge</h3>
         <ul>
@@ -64,6 +68,9 @@
             </li>
           <?php endwhile; ?>
         </ul>
+        <?php if($unsliced_query->found_posts > 3): ?>
+          <a href="<?php echo get_permalink( get_page_by_path('antraege') ) ?>?focus=<?php echo get_queried_object()->post_name; ?>">mehr Anträge</a>
+        <?php endif; ?>
       </section>
     <?php endif; ?>
     <div class="single position post-wrapper center-header">
