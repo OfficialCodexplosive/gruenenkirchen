@@ -22,11 +22,11 @@ IE11
 
 :root
 {
-  --landing-header-font-size: 2rem;
+  --landing-header-font-size: 2.5rem;
   --landing-header-width: calc(var(--landing-header-font-size) * 11);
 
   --landing-intro-height-small: calc(50vh - var(--nav-height));
-  --landing-intro-height: calc(100vh - var(--nav-height));
+  --landing-intro-height: calc(103vh - var(--nav-height));
 }
 
 body
@@ -47,11 +47,12 @@ body
   {
     font-family: 'Roboto', sans-serif;
     font-size: var(--landing-header-font-size);
-    color: var(--accent2-color);
+    /*color: var(--accent2-color);*/
+    color: #fff;
+    text-shadow: 0px 0px 6px rgba(0,0,0,0.56);
     margin: 0;
     padding: 0;
     line-height: var(--landing-header-font-size);
-    width: var(--landing-header-width);
   }
 
   .landing-intro h1
@@ -71,16 +72,6 @@ body
     width: 100vw;
     background-color: white;
     text-transform: uppercase;
-  }
-
-  #landing-halflogo
-  {
-    height: var(--landing-intro-height-small);
-    width: var(--landing-intro-height-small);
-    background-size: 100% var(--landing-intro-height-small);
-    background-repeat:no-repeat;
-    background-position: center center;
-    filter: brightness(0) saturate(100%) invert(89%) sepia(53%) saturate(3152%) hue-rotate(317deg) brightness(104%) contrast(105%);
   }
   
   body {
@@ -206,59 +197,43 @@ body
 
   .landing-intro
   {
-    display: inline-block;
+    display: flex;
     height: var(--landing-intro-height);
     width: 100vw;
-    background-color: white;
     text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
   }
 
-  .landing-intro #landing-stripe
+  #landing-img
   {
     position: absolute;
-    top: 44%;
+    top: 0;
+    bottom: 0;
     left: 0;
-    transform: translate(0, -44%);    
-    z-index: 3;
-
-    height: 2px;
-    width: var(--landing-stripe-length);
-    background-color: var(--main-color);
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-size: auto 110%;
+    background-position: center;
   }
 
   .landing-intro #landing-text
   {
-    position: absolute;
-    top: 50%;
-    transform: translate(-20%, -50%);
-    left: 20%;
     z-index: 3;
+    text-align: center;
+    width: 75%;
   }
 
   #landing-text-link-separator
   {
     background-color: none;
-    padding: 1.5vh;
-  }
-
-  #landing-flower-overlay
-  {
-    position: absolute;
-    height: calc(100% - var(--nav-height));
-    width: 100%;
-    left: 0;
-    top: var(--nav-height);
-    z-index: 2;
-  }
-
-  #landing-flower-overlay > *
-  {
-    display: inline-block;
+    padding: 6.5vh;
   }
 
   .landing-intro #landing-text a
   {
-    background-color: var(--main-color);
+    background-color: var(--accent1-dark-color);
     text-decoration: none;
     color: #fff;
     font-size: var(--font-size-small);
@@ -270,55 +245,8 @@ body
   .landing-intro #landing-text a:hover
   {
     color: #fff;
-    background-color: var(--accent1-dark-color);
+    background-color: var(--main-color);
   }
-
-  #landing-intro-half1
-  {
-    height: 100%;
-    width: 30vw;
-    background-color: white;
-  }
-
-  .landing-halflogo
-  {
-    margin-left: -1vw;
-    height: 100%;
-    width: auto;
-    /*filter: brightness(0) saturate(100%) invert(89%) sepia(53%) saturate(3152%) hue-rotate(317deg) brightness(104%) contrast(105%);*/
-  }
-
-  #landing-intro-half2:before
-  {
-    content: "";
-    position: absolute;
-    left: 0; right: 0;
-    top: 0; bottom: 0;
-    background: rgba(255,255,255,.3);
-  }
-
-  #landing-intro-half2
-  {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    max-width: none;
-    max-height: none;
-    object-fit: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: 1;
-    right: 0;
-    left: 0;
-  }
-
-  
 
   /* Partnerschaften */
   .partnerships
@@ -407,7 +335,7 @@ body
 
   .news .site-content .wrapper,
   .kontakt .site-content .wrapper {
-    display: grid; 
+    /*display: grid; 
 
     grid-template-columns: 2fr 1fr; 
     grid-template-areas: 
@@ -415,7 +343,8 @@ body
       "col1 col2";
 
     grid-column-gap: 3rem; 
-    grid-row-gap: 1rem; 
+    grid-row-gap: 1rem;*/
+    display: block;
   }
 
   /* Das erste Grid-Item explizit positionieren */ 

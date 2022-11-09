@@ -16,6 +16,11 @@ elseif($parent_slug === "vorstand")
 elseif($post_slug === "ratsfraktion")
 {?>
 <?php include get_theme_file_path( '/page-vorstand.php' ); ?>
+<?php 
+}
+elseif($post_slug === "themen")
+{?>
+<?php include get_theme_file_path( '/page-themen.php' ); ?>
 <?php }
 elseif($parent_slug === "ratsfraktion")
 {?>

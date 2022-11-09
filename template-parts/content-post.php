@@ -3,8 +3,7 @@
 <header>
   <h3><?php the_title();?></h3>
 
-  <p class="beitragsinfo">
-    <span class="autor"><?php the_author();?></span> | 
+  <p class="beitragsinfo"> 
     <time datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date(); ?></time>
   </p>
 </header>  

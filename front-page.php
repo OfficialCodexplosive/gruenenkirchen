@@ -4,18 +4,13 @@
     <main class="site-content">
 
       <section class="landing-intro">
-        <div id="landing-flower-overlay">
-          <div id="landing-intro-half1"></div>
-          <img class="landing-halflogo" src="<?php echo get_bloginfo('template_url') ?>/images/gruene_halbblume_stencil.svg"></div>
-        </div>
-        <div id="landing-intro-half2" style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/gruene_header.jpg')"></div>
-        <div id="landing-stripe"></div>
         <div id="landing-text">
             <h1>GEILENKIRCHEN</h1>
             <h2><?php bloginfo('description');?></h2>
             <div id="landing-text-link-separator"></div>
             <a href="#aktuelles">MEHR ERFAHREN</a>
         </div>
+        <div id="landing-img" style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/gruene_gk_collage_v2_blur.png');"></div>
       </section>
 
       <section class="partnerships center-header">
@@ -28,8 +23,8 @@
               <li><div style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/bluetenparadies.svg');"></div></li>
               -->
               <li><div><a href="./spenden" class="call-to-action">Spenden</a></div></li>
-              <li><div><a href="./mitglied-werden" class="call-to-action">Mitglied werden</a></div></li>
-              <li><div><a href="./aktiv-werden" class="call-to-action">Aktiv werden</a></div></li>
+              <li><div><a href="https://www.gruene.de/mitglied-werden" class="call-to-action">Mitglied werden</a></div></li>
+              <li><div><a href="https://www.gruene.de/aktiv-werden" class="call-to-action">Aktiv werden</a></div></li>
             </ul>
       </section>
       

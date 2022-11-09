@@ -577,6 +577,20 @@ content.css
     margin-bottom: 4rem;
   }
 
+  .beitragsliste article header h3{
+    font-size: var(--font-size-large);
+    margin: 0;
+  }
+
+  .beitragsliste article header .beitragsinfo{
+    font-size: var(--font-size-small);
+    margin: 0;
+  }
+
+  .beitragsliste article p{
+    font-size: var(--font-size-regular);
+  }
+
   .beitragsinfo {
     color: #999; 
   }    
