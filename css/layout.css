@@ -45,7 +45,8 @@ body
 
   .landing-intro h1, .landing-intro h2
   {
-    font-family: 'Roboto', sans-serif;
+    
+    font-family: 'Archivo';
     font-size: var(--landing-header-font-size);
     /*color: var(--accent2-color);*/
     color: #fff;
