@@ -70,14 +70,15 @@
                           < ?php }?>
                         </ul>
                       </h3>-->
-                      <h3><?php the_date(); ?></h3>
                       <h2><?php the_title(); ?></h2>
+                      <h3><?php the_date(); ?></h3>
                       <p>
                         <?php 
                           $content = get_the_content();
                           echo wp_filter_nohtml_kses( $content );
                           ?>
                       </p>
+                      <span class="faux-link">Weiterlesen</span>
                     </div>
                   </div>
                 </a>

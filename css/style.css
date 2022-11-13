@@ -46,7 +46,8 @@ style.css
   --main-desaturated-color: rgb(97, 128, 87);
   --main-desaturated-value-pair: 97,128,87;
   --main-desaturated-dark-color: rgb(78, 102, 69);
-  --main-light-color: #91c97c;
+  --main-light-color: rgb(145, 201, 124);
+  --main-light-value-pair: 145,201,124;
   --main-lighter-color: rgb(237, 255, 231);
   --accent1-color: rgb(255, 212, 78);
   --accent1-dark-color: rgb(230, 190, 71);
