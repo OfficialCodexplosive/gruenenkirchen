@@ -89,14 +89,13 @@
         display:inline-block;
         vertical-align: top;
         text-align: left;
-        text-transform: uppercase;
-        font-weight: 700;
+        font-weight: var(--font-weight-medium);
+        font-family: 'Archivo';
     }
 
     #menu-footer a
     {
         font-family: 'Archivo';
-        font-style: italic;
     }
 
     #menu-footer .sub-menu
@@ -111,8 +110,7 @@
 
     #menu-footer .sub-menu a
     {
-        font-family: 'Roboto';
-        font-style: normal;
+        font-weight: var(--font-weight-smaller);
     }
 
     #menu-unterfooter > li

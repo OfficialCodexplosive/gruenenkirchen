@@ -88,22 +88,24 @@
     flex-flow: column;
     margin-top: 1rem;
     transition: all .1s ease-out;
-    padding: 16px;
+    padding: 1em;
+    border: 1px solid rgba(var(--main-desaturated-value-pair), 0);
 }
 
 .vorstand-row > .child-portrait:hover
 {
-    background-color: var(--main-light-color);
+    background-color: rgba(var(--main-desaturated-value-pair), .05);
+    border: 1px solid rgba(var(--main-desaturated-value-pair), .25);
 }
 
 .vorstand-row > a
 {
-    font-family: 'Roboto';
+    font-family: 'Archivo';
 }
 
 .child-portrait > .name
 {
-    font-family: 'Roboto';
+    font-family: 'Arvo';
     font-weight: var(--font-weight-medium);
     font-size: var(--font-size-medium);
     color: var(--accent2-color);
@@ -259,7 +261,7 @@
     background: none;
     border: solid 1px var(--main-color);
     padding: .25rem .75rem;
-    font-family: 'Roboto';
+    /*font-family: 'Roboto';*/
     font-weight: var(--font-weight-small);
     font-size: var(--font-size-regular);
 }

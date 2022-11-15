@@ -87,9 +87,16 @@
     font-weight: bold;
 }
 
+/*
 .positionen-content .post-wrapper a
 {
     border: none;
+}
+*/
+
+.antrag-content.center-header > h3
+{
+    color: var(--positionen-text-color);
 }
 
 .positionen-content a:hover
@@ -241,7 +248,7 @@ details summary > *
     display: none;
 }
 
-.position.post-wrapper
+/*.position.post-wrapper
 {
     background-color: transparent;
     padding: 40px 0;
@@ -271,4 +278,4 @@ details summary > *
 .position.post-wrapper .post
 {
     background-color: var(--positionen-text-color);
-}
+}*/
