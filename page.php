@@ -21,6 +21,11 @@ elseif($post_slug === "ratsfraktion")
 elseif($post_slug === "themen")
 {?>
 <?php include get_theme_file_path( '/page-themen.php' ); ?>
+<?php 
+}
+elseif($post_slug === "termine")
+{?>
+<?php include get_theme_file_path( '/page-termine.php' ); ?>
 <?php }
 elseif($parent_slug === "ratsfraktion")
 {?>

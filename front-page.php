@@ -40,7 +40,6 @@
               <?php 
               if ( $the_query->have_posts() ) : 
                 while ( $the_query->have_posts() ) : $the_query->the_post(); 
-                  $count++;
               ?>
                 <?php if (has_post_thumbnail( get_the_ID() ) ): ?>
                   <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'single-post-thumbnail' ); ?>
@@ -53,23 +52,6 @@
                   </div>
                   <div class="post-overlay">
                     <div class="post-info">
-                      <!-- exclude all categories that are sub of 'position'-->
-                      <!--< ?php $categories = get_the_category(); ?>
-                      <h3>
-                        <ul class="post-categories">
-                          < ?php foreach($categories as $category){ ?>
-                            < ?php 
-                              $cat_parent_id = $category->category_parent;
-                              
-                              #$cat_parent = get_the_category_by_ID( $cat_parent_id );
-                              if( $cat_parent_id != 14 )
-                              {
-                            ?>
-                            <li><a href="< ?php echo get_category_link($category->term_id);?>"><?php echo $category->name ?></a></li>
-                            < ?php } ?>
-                          < ?php }?>
-                        </ul>
-                      </h3>-->
                       <h2><?php the_title(); ?></h2>
                       <h3><?php the_date(); ?></h3>
                       <p>
