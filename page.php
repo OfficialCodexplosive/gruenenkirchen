@@ -35,9 +35,3 @@ elseif($parent_slug === "ratsfraktion")
 {?>  
   <?php include get_theme_file_path( '/page-default.php' ); ?>
 <?php }?>     
-    
-  
-
-<?php get_footer(); ?>
-
-

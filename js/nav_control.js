@@ -1,12 +1,22 @@
 function openNav() {
-    document.getElementById("mainSidebar").style.width = "100%";
-    disableScroll();
+  var body = document.querySelector("body.home.blog.gruenenkirchen");
+  var sidebar = document.querySelector("#mainSidebar");
+  sidebar.style.width = "100%";
+
+  let he = sidebar.offsetHeight + "px";
+  body.style.height = he;
+  body.style.overflow = "hidden";
+  //disableScroll();
 }
 
 /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
 function closeNav() {
-    document.getElementById("mainSidebar").style.width = "0";
-    enableScroll();
+  var body = document.querySelector("body.home.blog.gruenenkirchen");
+  var sidebar = document.querySelector("#mainSidebar");
+  sidebar.style.width = "0";
+  body.style.height = "auto";
+  body.style.overflow = "visible";
+  //enableScroll();
 } 
 
 

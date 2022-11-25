@@ -12,3 +12,5 @@
             <a class="btn-404" href="<?php echo get_home_url(); ?>">Zurück zur Homepage</a>
           </div>
     </main>
+
+    <?php get_footer(); ?>
