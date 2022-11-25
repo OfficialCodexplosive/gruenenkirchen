@@ -21,12 +21,29 @@
   ?>
   
   <body <?php body_class( $bodyclass); ?>>
-
+    <div id="mainSidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()">&times;</a>
+      <div class="horizBreak"></div>
+      <?php
+        wp_nav_menu( 
+            array( 
+                'theme_location' => 'primary', 
+                'menu_class' => 'site-nav-list' ) );
+        ?>
+        <div class="horizBreak"></div>
+        <ul class="sidebar-social-links">
+          <li><a href="https://de-de.facebook.com/GrueneGeilenkirchen/"><div class="brand-icon" style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/facebook_f.svg');"></div></a></li>
+          <li><a href="https://www.instagram.com/gruene_gk/"><div class="brand-icon" style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/instagram_outline.svg');"></div></a></li>
+        </ul>
+    </div>
     <nav class="site-nav">
       <div class="wrapper">
-        
-        <button class="menubutton" onclick="this.classList.toggle('show-menu')">
-          <i class="fas fa-bars"></i>&nbsp;Menü
+        <button class="openBtn" onclick="openNav()">
+          <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="20" height="1" fill="#143324"></rect>
+            <rect y="7" width="20" height="1" fill="#143324"></rect>
+            <rect y="14" width="20" height="1" fill="#143324"></rect>
+          </svg>
         </button>
         
         <!--

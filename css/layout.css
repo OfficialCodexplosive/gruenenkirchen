@@ -174,29 +174,6 @@ body
     text-decoration: none; 
   }
 
-} /* Ende @media */ 
-
-
-/* Wrapper auf 960px für moderne Browser */ 
-@supports (display:grid) {
-  
-  .wrapper {
-    /*max-width: 960px;*/
-    max-width: 100%; 
-  }  
-  
-}
-
-
-/**
-  * Grid - zweispaltiges Layout im Inhaltsbereich 
-  * mit Bereichsnamen ("Named Grid Areas")
-  * 
-  */
-
-@media screen and (min-width: 768px) 
-{
-
   .landing-intro
   {
     display: flex;
@@ -388,6 +365,31 @@ body
   .kontakt .kontaktformular-abschnitt {
     grid-area: col1; 
   }
+
+} /* Ende @media */ 
+
+
+/* Wrapper auf 960px für moderne Browser */ 
+@supports (display:grid) {
+  
+  .wrapper {
+    /*max-width: 960px;*/
+    max-width: 100%; 
+  }  
+  
+}
+
+
+/**
+  * Grid - zweispaltiges Layout im Inhaltsbereich 
+  * mit Bereichsnamen ("Named Grid Areas")
+  * 
+  */
+
+@media screen and (min-width: 768px) 
+{
+
+  
 
 } /* Ende der Media Query */ 
 

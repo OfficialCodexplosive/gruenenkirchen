@@ -61,6 +61,11 @@ function register_gk_styles() {
                         get_template_directory_uri() .'/js/hide_unfocus.js',
                         null, false, true);
     wp_enqueue_script('gkunfocus');
+
+    wp_register_script('gkmenu',
+                        get_template_directory_uri() .'/js/nav_control.js',
+                        null, false, true);
+    wp_enqueue_script('gkmenu');
    
 }
 
