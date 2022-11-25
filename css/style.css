@@ -84,6 +84,31 @@ style.css
   --font-weight-regular: 400;
   --font-weight-medium: 600;
   --font-weight-large: 800;
+
+  --landing-header-font-size: var(--font-size-xlarge);
+  --landing-header-width: calc(var(--landing-header-font-size) * 11);
+  --landing-intro-height-small: calc(50vh - var(--nav-height));
+  --landing-intro-height: calc(102vh - var(--nav-height));
+
+  --landing-text-width: 75%;
+}
+
+@media screen and (max-width: 950px)
+{
+    :root
+  {
+    --nav-height: 3.5rem;
+
+    --font-size-smaller: .2rem;
+    --font-size-small: .6rem;
+    --font-size-regular: .8rem;
+    --font-size-medium: 1rem;
+    --font-size-large: 1.3rem;
+    --font-size-mlarge: 1.6rem;
+    --font-size-xlarge: 2rem;
+
+    --landing-text-width: 95%;
+  }
 }
 
 a
