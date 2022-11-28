@@ -31,8 +31,9 @@
       <section class="content-intro">
         
         <div class="post-wrapper center-header">
+          <h3 id="aktuelles">Aktuelles</h3>
           <div class="center-section">
-            <h3 id="aktuelles">Aktuelles</h3>
+            
             <div class="section">
               <?php
                 $the_query = new WP_Query( array('posts_per_page' => 3,) );
@@ -67,10 +68,10 @@
                 <?php endwhile; ?>
               <?php endif; ?>
             </div>
-            <div class="btn-wrap">
+          </div>
+          <div class="btn-wrap">
               <a class="call-to-action btn-more" href="./beitraege">Mehr</a>
             </div>
-          </div>
         </div>
 
         

@@ -108,3 +108,11 @@ p:empty
     background-color: var(--footer-bg);
     margin: 20px 0;
 }
+
+@media screen and (max-width: 500px) 
+{
+    .site-default .center-section
+    {
+        padding: 0 5%;
+    }
+}

@@ -397,10 +397,13 @@ body
     padding: 2em 0;
   }
 
-  .post-wrapper.center-header, .post-wrapper .center-section, .post-wrapper .section
+  /*.post-wrapper.center-header, .post-wrapper .center-section, .post-wrapper .section
   {
-    
-    width: fit-content;
+    overflow-x: auto;
+  }*/
+
+  .post-wrapper .center-section
+  {
     overflow-x: auto;
   }
 

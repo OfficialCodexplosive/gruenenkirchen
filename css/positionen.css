@@ -279,3 +279,18 @@ details summary > *
 {
     background-color: var(--positionen-text-color);
 }*/
+
+@media screen and (max-width: 500px) 
+{
+    .positionen-row
+    {
+        width: 100%;
+        gap: 0;
+    }
+
+    .positionen-row > .pos-portrait
+    {
+        flex: 0 0 50%;
+        padding: .5em;
+    }
+}
