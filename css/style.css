@@ -112,12 +112,6 @@ style.css
   }
 }
 
-body
-{
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 a
 {
   color: var(--main-color);

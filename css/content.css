@@ -49,7 +49,7 @@ content.css
   #vorstand-header .column.content h1, #vorstand-header .column.content h2, .site-default h2, .site-positionen .center-section h3,
   .site-vorstand .center-section h3
   {
-    font-family: 'Arvo';
+    font-family: 'Arvo', 'Archivo', sans-serif;
     /*font-style:italic;*/
   }
 
