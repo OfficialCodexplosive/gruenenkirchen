@@ -113,6 +113,24 @@ p:empty
 {
     .site-default .center-section
     {
-        padding: 0 5%;
+        padding: 5% 5% 0 5%;
+        font-size: var(--font-size-large);
+        line-height: 2rem;
+        font-weight: var(--font-weight-small);
+    }
+
+    .wp-block-quote
+    {
+        width: 100%;
+        padding: 0 1rem;
+        font-size: var(--font-size-large);
+    }
+
+    .wp-block-file:not(.wp-element-button)
+    {
+        font-size: var(--font-size-medium);
+        width: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
 }

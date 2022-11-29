@@ -58,7 +58,6 @@ content.css
   .site-default *, .site-positionen .center-section h3, .site-vorstand .center-section h3
   {
     color: var(--footer-bg);
-    margin: 0;
   }
 
   /* Posts/ neue Artikel */
@@ -730,6 +729,21 @@ content.css
   .positionen-wrapper .section
   {
     padding: 4% 0;
+  }
+
+  .home .post-wrapper
+  {
+    padding: inherit;
+  }
+
+  .home .post-wrapper h3
+  {
+    margin-top: 1rem;
+  }
+
+  .post-wrapper
+  {
+    padding: 0;
   }
 }
   

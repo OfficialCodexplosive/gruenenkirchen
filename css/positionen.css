@@ -282,6 +282,10 @@ details summary > *
 
 @media screen and (max-width: 500px) 
 {
+    .positionen-content h3
+    {
+        font-size: var(--font-size-large);
+    }
     .positionen-row
     {
         width: 100%;
@@ -292,5 +296,19 @@ details summary > *
     {
         flex: 0 0 50%;
         padding: .5em;
+    }
+
+    .positionen-content
+    {
+        padding: 0 6vw;
+        font-size: var(--font-size-medium);
+        font-weight: var(--font-weight-small)
+    }
+
+    .positionen-intro > h1
+    {
+        font-size: var(--font-size-xxlarge);
+        padding: .8em 0 0 0;
+
     }
 }

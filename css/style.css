@@ -106,9 +106,16 @@ style.css
     --font-size-large: 1.3rem;
     --font-size-mlarge: 1.6rem;
     --font-size-xlarge: 2rem;
+    --font-size-xxlarge: 2.5rem;
 
     --landing-text-width: 95%;
   }
+}
+
+body
+{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a

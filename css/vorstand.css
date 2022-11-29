@@ -281,10 +281,69 @@
 
 @media screen and (max-width: 500px) 
 {
+
+    .focus-selection > a
+    {
+        font-size: var(--font-size-medium);
+    }
   .vorstand-row > .child-portrait
   {
     flex: 0 0 50%;
     padding: .5em;
+  }
+
+  #vorstand-header
+  {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  #vorstand-header .column.content
+  {
+    order: 2;
+  }
+
+  #vorstand-header .column.portrait
+  {
+    order: 1;
+    padding: .2em 0;
+    height: 60vh;
+  }
+
+  .page-child .wrapper
+  {
+    padding: 0 0;
+  }
+
+  #vorstand-header .column.content .personal
+  {
+    font-size: var(--font-size-large);
+  }
+
+  #vorstand-contact
+  {
+    padding: 5% 5%;
+  }
+
+  #vorstand-contact h3
+  {
+    font-size: var(--font-size-medium);
+  }
+
+  #vorstand-contact .column
+  {
+    flex: 0 0 100%;
+  }
+
+  #vorstand-contact .column:first-of-type, #vorstand-contact .column:last-of-type
+  {
+    padding: 0 0;
+  }
+
+  #vorstand-contact .contact-form > form > .elem-group *, 
+  #vorstand-contact .contact-form > form input[type="submit"]
+  {
+    font-size: var(--font-size-medium);
   }
 }
 
