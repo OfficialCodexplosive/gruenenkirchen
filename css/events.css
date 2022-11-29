@@ -1,0 +1,145 @@
+@media screen 
+{
+    :root
+    {
+        --img-dimen: 6em;
+    }
+
+    h4
+    {
+        font-size: var(--font-size-medium);
+        font-family: 'Archivo', sans-serif;
+        text-align: left;
+        color: var(--footer-bg);
+        margin: 0;
+    }
+
+    .center-section.events
+    {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .em-view-container
+    {
+        margin-bottom: 2.5em;
+    }
+
+    .em-list
+    {
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 1em;
+    }
+
+    .em-event.em-item
+    {
+        cursor: pointer;
+        flex: 0 0 100%;
+
+        display: grid;
+        grid-template-columns: var(--img-dimen) auto;
+        grid-gap: 5px;
+
+        overflow: hidden;
+
+        border: 1px solid rgba(var(--main-desaturated-value-pair), 0);
+        transition: all .2s ease-out;
+        width: 100%;
+        margin: 0;
+        padding: 1em;
+    }
+
+    .em-event.em-item:hover
+    {
+        background-color: rgba(var(--main-desaturated-value-pair), 0.05);
+        border: 1px solid rgba(var(--main-desaturated-value-pair), 0.25);
+    }
+
+    .em-item-info
+    {
+        text-align: left;
+        padding-left: 1.25em;
+    }
+
+    .em-item-title
+    {
+        margin: 0;
+    }
+
+    .em-item-title > *
+    {
+        font-size: var(--font-size-medium);
+    }
+
+    .em-event-meta > *
+    {
+        font-size: var(--font-size-small);
+    }
+
+    .em-event-meta > .em-event-location > span
+    {
+        display: none;
+    }
+
+    .em-event-meta > .em-event-location > a
+    {
+        pointer-events: none;
+        cursor: default;
+    }
+
+    .em-item-desc
+    {
+        display: none;
+    }
+
+    .em-item-actions.input
+    {
+        display: none;
+    }
+
+    .em-item-actions.input a
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .em-item-info > *
+    {
+        font-size: var(--font-size-regular);
+    }
+
+    .em-item-image
+    {
+        overflow: hidden;
+        position: relative;
+        height: 100%;
+        aspect-ratio: 1;
+    }
+
+    .em-item-image > img
+    {
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media screen and (max-width: 950px) 
+{
+
+    h4
+    {
+        font-size: var(--font-size-large);
+    }
+    .center-section.events
+    {
+        width: 100%;
+    }
+}

@@ -140,6 +140,11 @@
         color: #fff;
     }
 
+    footer.site-footer div.wrapper
+    {
+        padding: 15px 0;
+    }
+
 } /* Ende @media */   
   
   

@@ -6,7 +6,7 @@ body
     background-color: rgba(var(--main-value-pair), .1)
 }
 
-.post-template-default .wrapper
+.post-template-default .wrapper, .event-template-default .wrapper
 {
     margin: 0;
     padding: 0;
@@ -102,7 +102,7 @@ body
     color: var(--accent1-darker-color);
 }
 
-.post-template-default .has-padding
+.post-template-default .has-padding, .event-template-default .has-padding
 {
     width: 60vw;
     margin: 0 auto;
@@ -375,12 +375,12 @@ body
         order: 2;
     }
 
-    .post-template-default .has-padding
+    .post-template-default .has-padding, .event-template-default .has-padding
     {
         width: 100%;
     }
 
-    .post-template-default .site-content .wrapper
+    .post-template-default .site-content .wrapper, .event-template-default .site-content .wrapper
     {
         font-size: var(--font-size-large);
         font-weight: var(--font-weight-small);

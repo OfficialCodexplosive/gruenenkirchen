@@ -66,7 +66,11 @@ function register_gk_styles() {
                         get_template_directory_uri() .'/js/nav_control.js',
                         null, false, true);
     wp_enqueue_script('gkmenu');
-   
+
+    wp_register_script('gkeventsclick',
+                        get_template_directory_uri() .'/js/events_clicker.js',
+                        null, false, true);
+    wp_enqueue_script('gkeventsclick');
 }
 
 add_shortcode( 'contact-form', 'display_contact_form' );
