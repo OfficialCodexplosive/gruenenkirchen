@@ -90,11 +90,6 @@
     color: var(--main-color);
 }
 
-.download-section
-{
-
-}
-
 p:empty
 {
     display: none;
