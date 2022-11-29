@@ -90,7 +90,7 @@ style.css
   --landing-header-font-size: var(--font-size-xlarge);
   --landing-header-width: calc(var(--landing-header-font-size) * 11);
   --landing-intro-height-small: calc(50vh - var(--nav-height));
-  --landing-intro-height: calc(102vh - var(--nav-height));
+  --landing-intro-height: calc(100vh - var(--nav-height));
 
   --landing-text-width: 75%;
 }

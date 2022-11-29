@@ -167,8 +167,8 @@ body
 
   .landing-intro
   {
-    display: flex;
     height: var(--landing-intro-height);
+    display: flex;
     width: 100vw;
     text-transform: uppercase;
     align-items: center;
