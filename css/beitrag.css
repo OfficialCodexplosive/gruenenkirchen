@@ -278,7 +278,7 @@ body
     text-align: center;
 }*/
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 950px) {
     .single.post-wrapper .section
     {
         padding: 0;

@@ -710,7 +710,7 @@ content.css
   
 } /* Ende @media */ 
 
-@media screen and (max-width: 500px) 
+@media screen and (max-width: 950px) 
 {
   .positionen-gallery > li
   {

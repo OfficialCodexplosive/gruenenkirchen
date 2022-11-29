@@ -45,6 +45,10 @@
             <rect y="14" width="20" height="1" fill="#143324"></rect>
           </svg>
         </button>
+
+        <div class="openBtn icon">
+          <a href="<?php echo get_home_url(); ?>" style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/gruen_sonnenblume_outline.svg');"></a>
+        </div>
         
         <!--
         <div class="site-nav-col">

@@ -109,7 +109,7 @@ p:empty
     margin: 20px 0;
 }
 
-@media screen and (max-width: 500px) 
+@media screen and (max-width: 950px) 
 {
     .site-default .center-section
     {
