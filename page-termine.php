@@ -20,16 +20,6 @@
                   <?php else : ?>
                     <?php $image = array( get_bloginfo('template_url') . '/images/image_placeholder.png)' ); ?>
                   <?php endif; ?>
-                  <!--<a class="pos-portrait" href="< ?php the_permalink(); ?>">
-                    <div class="img-wrapper">
-                      <img src="< ?php echo $image[0]; ?>"/>
-                    </div>
-                    <div class="post-overlay">
-                      <div class="post-info">
-                        <h2>< ?php the_title(); ?></h2>
-                      </div>
-                    </div>
-                  </a>-->
               <?php endwhile; ?>
           <?php endif; wp_reset_postdata(); ?>
         </div>

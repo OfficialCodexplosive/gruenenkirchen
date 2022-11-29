@@ -43,17 +43,6 @@
                         
           </div>
 
-          
-
-          <!--
-          <p class="beitragsinfo">
-            Veröffentlicht am
-            <time datetime="2018-03-25"><?php the_date(); ?></time>
-            von
-            <span class="autor"><?php the_author();?></span>
-          </p>
-          -->
-
           <div id="post-content" class="has-padding has-side-column">
             <div class="flexcol side-column">
               <a href="#" class="participate">Mitmachen</a>

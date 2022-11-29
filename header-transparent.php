@@ -9,7 +9,6 @@
     
     <title><?php wp_title('&raquo;', true, 'right'); bloginfo('name'); ?></title>
         
-    <!-- Font Awesome https://fontawesome.com/start --> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://netzbegruenung.github.io/webfonts/style.css">
     <?php wp_head(); ?>
@@ -49,13 +48,8 @@
         <div class="openBtn icon">
           <a href="<?php echo get_home_url(); ?>" style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/gruen_sonnenblume_outline.svg');"></a>
         </div>
-        
-        <!--
+
         <div class="site-nav-col">
-          <img class="site-nav-logo" src="<?php echo get_bloginfo('template_url') ?>/images/gruen_sonnenblume.png"/>
-        </div>-->
-        <div class="site-nav-col">
-          <!--<img class="site-nav-logo" src="< ?php echo get_bloginfo('template_url') ?>/images/gruen_sonnenblume.png"/>-->
           <a href="<?php echo get_home_url(); ?>">
             <div id="site-nav-logo" style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/gruen_sonnenblume.png');"></div>
           </a>

@@ -1,7 +1,6 @@
    
     <footer class="site-footer">
       <div class="wrapper">
-        <!--<span id="footer-title">< ?php echo get_bloginfo( 'name' ); ?></span>-->
 
         <nav class="meta-nav">
         

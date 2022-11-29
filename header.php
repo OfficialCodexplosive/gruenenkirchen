@@ -50,12 +50,7 @@
           <a href="<?php echo get_home_url(); ?>" style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/gruen_sonnenblume_outline.svg');"></a>
         </div>
         
-        <!--
         <div class="site-nav-col">
-          <img class="site-nav-logo" src="<?php echo get_bloginfo('template_url') ?>/images/gruen_sonnenblume.png"/>
-        </div>-->
-        <div class="site-nav-col">
-          <!--<img class="site-nav-logo" src="< ?php echo get_bloginfo('template_url') ?>/images/gruen_sonnenblume.png"/>-->
           <a href="<?php echo get_home_url(); ?>">
             <div id="site-nav-logo" style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/gruen_sonnenblume.png');"></div>
           </a>

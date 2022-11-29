@@ -16,12 +16,6 @@
       <section class="partnerships center-header">
           <h3>Mach mit!</h3>
             <ul>
-              <!--
-              <li><div style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/nabu.svg');"></div></li>
-              <li><div style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/volksinitiative_artenvielfalt.svg');"></div></li>
-              <li><div style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/ichkaufelokal.svg');"></div></li>
-              <li><div style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/bluetenparadies.svg');"></div></li>
-              -->
               <li><div><a href="./spenden" class="call-to-action">Spenden</a></div></li>
               <li><div><a href="https://www.gruene.de/mitglied-werden" class="call-to-action">Mitglied werden</a></div></li>
               <li><div><a href="https://www.gruene.de/aktiv-werden" class="call-to-action">Aktiv werden</a></div></li>
@@ -154,34 +148,3 @@
 
 
     <?php get_footer(); ?>
-
-    <!--
-        <div class="date-wrapper">
-              <div class="events">
-                < ?php 
-                  $events = tribe_get_events( array('ends_after' => 'now') );
-
-                  foreach( $events as $event )
-                  {
-                    setup_postdata( $event );
-                  
-                ?>
-                <span>< ?php echo 'break 12'; ?></span>
-                <div class="event">
-                  <h2 class="event-date">
-                    < ?php echo tribe_get_start_date( $event ); ?>
-                  </h2>
-                  <h1 class="event-title">
-                    < ?php echo $event->post_title; ?>
-                  </h1>
-                  <a class="event-link" href="< ?php echo tribe_get_event_link( $event ); ?>">
-                    <div class="event-button">
-                      Details ansehen
-                    </div>
-                  </a>
-                </div>
-
-                < ?php }?>
-              </div>
-        </div>
-      -->
