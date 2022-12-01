@@ -8,10 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     
     <title><?php wp_title('&raquo;', true, 'right'); bloginfo('name'); ?></title>
-        
-    <!-- Font Awesome https://fontawesome.com/start --> 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://netzbegruenung.github.io/webfonts/style.css">
     <?php wp_head(); ?>
 
    
