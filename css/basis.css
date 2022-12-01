@@ -93,8 +93,8 @@ basis.css
     /* Variante 2: Schriftarten wünschen */
     font-family: Helvetica, Arial, sans-serif; 
 
-    /* Variante 3: Webfonts - Schriftart mitliefern (in style.css mit @import geladen) */
-    font-family: 'Source Sans Pro', Arial, sans-serif; 
+    /* Variante 3: Webfonts - Schriftart mitliefern (in style.css mit @import geladen) 
+    font-family: 'Source Sans Pro', Arial, sans-serif; */
 
     /* Schriftgröße explizit festlegen */ 
     font-size: 1rem; 
