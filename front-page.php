@@ -3,15 +3,17 @@
     
     <main class="site-content">
 
-      <section class="landing-intro">
+      <!--<section class="landing-intro">
         <div id="landing-text">
             <h1>GEILENKIRCHEN</h1>
-            <h2><?php bloginfo('description');?></h2>
+            <h2>< ?php bloginfo('description');?></h2>
             <div id="landing-text-link-separator"></div>
             <a href="#aktuelles">MEHR ERFAHREN</a>
         </div>
-        <div id="landing-img" style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/gruene_gk_collage_v2_blur.png');"></div>
-      </section>
+        <div id="landing-img" style="background-image: url('< ?php echo get_bloginfo('template_url') ?>/images/gruene_gk_collage_v2_blur.png');"></div>
+      </section>-->
+
+      <?php include('landing-intro.php'); ?>
 
       <section class="partnerships center-header">
           <h3>Mach mit!</h3>

@@ -184,7 +184,7 @@ body
     right: 0;
     height: 100%;
     width: 100%;
-    background-size: auto 110%;
+    background-size: cover;
     background-position: center;
   }
 

@@ -2,11 +2,6 @@
 
 add_action( 'wp_enqueue_scripts', 'register_gk_styles' );
 
-function gk_register_widget()
-{
-  
-}
-
 add_action( 'wp_enqueue_scripts', 'gk_content_articles' );
 function gk_content_articles($_content)
 {
@@ -41,10 +36,6 @@ remove_filter('the_content','wpautop');
 remove_filter('the_excerpt','wpautop');
 remove_filter('the_title','wpautop');
 
-add_action('widgets_init', 'gk_register_widget');
-
-do_action('customize_register');
-
 function register_gk_styles() { 
     wp_enqueue_style( 'themestyle', get_stylesheet_uri() );
     
@@ -74,6 +65,28 @@ function register_gk_styles() {
 }
 
 add_shortcode( 'contact-form', 'display_contact_form' );
+
+
+function gk_customize_register( $wp_customize )
+{
+  $wp_customize->add_section('gk_landing_section', 
+  array(
+      'title' => 'Landungsseite',
+      'priority' => 30,
+    )
+  );
+
+  $wp_customize->add_setting( 'gk_landing_image' );
+  
+  $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 
+  'landing_image_control', array(
+    'label'      => 'Hintergrundbild',
+    'section'    => 'gk_landing_section',
+    'settings'   => 'gk_landing_image',
+  ) ) );
+}
+
+add_action('customize_register', 'gk_customize_register');
 
 function display_contact_form() {
 
